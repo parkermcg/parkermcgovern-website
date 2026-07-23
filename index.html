@@ -256,18 +256,9 @@ section{padding:clamp(3.5rem,7vw,6.5rem) 0;scroll-margin-top:88px}
 .value-row h3{font-size:1.05rem}
 .value-row p{font-size:.9rem;margin-bottom:0}
 
-/* Calculators */
-.calc-tabs{display:flex;gap:.4rem;border-bottom:1px solid var(--line);margin-bottom:2.25rem;flex-wrap:wrap}
-.calc-tab{background:none;border:none;border-bottom:2px solid transparent;padding:.9rem 1.1rem;font-family:'Public Sans',sans-serif;font-weight:600;font-size:.95rem;color:var(--ink-soft);cursor:pointer;margin-bottom:-1px}
-.calc-tab.active{color:var(--navy-800);border-color:var(--gold-500)}
-:root[data-theme="dark"] .calc-tab.active{color:var(--ink)}
-@media (prefers-color-scheme:dark){.calc-tab.active{color:var(--ink)}}
-.calc-panel{display:none}
-.calc-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3rem)}
+/* Contact form fields (also used by calculator area's spacing utilities) */
 .field{margin-bottom:1.35rem}
 .field label{display:flex;justify-content:space-between;font-size:.86rem;font-weight:600;color:var(--ink);margin-bottom:.5rem}
-.field label .val{font-family:'IBM Plex Mono',monospace;color:var(--gold-600);font-weight:500}
-.field input[type="range"]{width:100%;accent-color:var(--gold-500);margin-top:.35rem}
 .field input[type="number"],.field select,.field input[type="text"],.field input[type="email"],.field input[type="tel"],.field textarea{
   width:100%;padding:.7rem .85rem;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--paper);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:.95rem;
 }
@@ -275,16 +266,6 @@ section{padding:clamp(3.5rem,7vw,6.5rem) 0;scroll-margin-top:88px}
 .field-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .checkbox-field{display:flex;align-items:flex-start;gap:.6rem;font-size:.88rem;color:var(--ink-soft)}
 .checkbox-field input{margin-top:.3rem}
-
-.statement{background:var(--navy-950);color:#EAE3CE;border-radius:var(--radius-md);padding:2rem;position:sticky;top:110px}
-.statement h4{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-300);margin-bottom:1.4rem;font-family:'Public Sans',sans-serif;font-weight:600}
-.statement-figure{font-family:'IBM Plex Mono',monospace;font-size:2.5rem;color:#F6F1E3;margin-bottom:.25rem}
-.statement-figure small{font-size:1rem;color:#9FAFC9;font-weight:500}
-.statement-sub{font-size:.85rem;color:#9FAFC9;margin-bottom:1.6rem}
-.statement-rule{border:none;border-top:1px solid var(--line-on-navy);margin:1.3rem 0}
-.statement-line{display:flex;justify-content:space-between;font-size:.88rem;padding:.45rem 0;color:#C9D2E3}
-.statement-line b{color:#F6F1E3;font-family:'IBM Plex Mono',monospace;font-weight:500}
-.statement-note{font-size:.78rem;color:#8593AC;margin-top:1.3rem}
 
 /* FAQ */
 .faq-cat{margin-bottom:2.75rem}
@@ -346,8 +327,6 @@ section{padding:clamp(3.5rem,7vw,6.5rem) 0;scroll-margin-top:88px}
   .grid-4{grid-template-columns:repeat(2,1fr)}
   .process-list{grid-template-columns:repeat(2,1fr)}
   .footer-grid{grid-template-columns:1fr 1fr}
-  .calc-panel.active{grid-template-columns:1fr}
-  .statement{position:static}
   .contact-grid{grid-template-columns:1fr}
 }
 @media (max-width:700px){
@@ -561,131 +540,12 @@ html{scroll-behavior:smooth}
     <div class="section-head">
       <p class="eyebrow">Calculators</p>
       <h2 class="h2" id="calc-h">Run your own numbers</h2>
-      <p>Estimates update instantly as you adjust the inputs. These are planning tools — your exact rate and qualification depend on lender review.</p>
+      <p>Pick a tool below and get an instant estimate — no sign-up, no obligation. These are planning numbers; your exact rate and qualification depend on lender review.</p>
     </div>
-
-    <div class="calc-tabs" role="tablist" aria-label="Mortgage calculators">
-      <button class="calc-tab active" role="tab" aria-selected="true" data-tab="payment">Mortgage Payment</button>
-      <button class="calc-tab" role="tab" aria-selected="false" data-tab="afford">Affordability</button>
-      <button class="calc-tab" role="tab" aria-selected="false" data-tab="ltt">Land Transfer Tax</button>
-    </div>
-
-    <!-- Payment calculator -->
-    <div class="calc-panel active" data-panel="payment">
-      <div>
-        <div class="field">
-          <label for="p-price">Purchase price <span class="val tnum" id="p-price-val">$650,000</span></label>
-          <input type="range" id="p-price" min="150000" max="2500000" step="5000" value="650000">
-        </div>
-        <div class="field">
-          <label for="p-down">Down payment <span class="val tnum" id="p-down-val">10% · $65,000</span></label>
-          <input type="range" id="p-down" min="5" max="100" step="1" value="10">
-        </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="p-rate">Interest rate <span class="val tnum" id="p-rate-val">5.25%</span></label>
-            <input type="range" id="p-rate" min="2" max="9" step="0.05" value="5.25">
-          </div>
-          <div class="field">
-            <label for="p-amort">Amortization <span class="val tnum" id="p-amort-val">25 yrs</span></label>
-            <input type="range" id="p-amort" min="5" max="30" step="1" value="25">
-          </div>
-        </div>
-        <div class="field">
-          <label for="p-freq">Payment frequency</label>
-          <select id="p-freq">
-            <option value="12">Monthly</option>
-            <option value="26">Bi-weekly</option>
-            <option value="26a">Accelerated bi-weekly</option>
-            <option value="52">Weekly</option>
-          </select>
-        </div>
-      </div>
-      <div class="statement" aria-live="polite">
-        <h4>Estimated payment</h4>
-        <div class="statement-figure tnum" id="p-out-payment">$0<small id="p-out-freq-label"> / month</small></div>
-        <p class="statement-sub" id="p-out-cmhc-note"></p>
-        <hr class="statement-rule">
-        <div class="statement-line"><span>Loan amount</span><b class="tnum" id="p-out-loan">—</b></div>
-        <div class="statement-line"><span>Default insurance (CMHC)</span><b class="tnum" id="p-out-cmhc">—</b></div>
-        <div class="statement-line"><span>Total interest over amortization</span><b class="tnum" id="p-out-interest">—</b></div>
-        <div class="statement-line"><span>Total cost over amortization</span><b class="tnum" id="p-out-total">—</b></div>
-        <p class="statement-note">Assumes a fixed rate compounded semi-annually, per standard Canadian mortgage convention. Estimate only.</p>
-      </div>
-    </div>
-
-    <!-- Affordability calculator -->
-    <div class="calc-panel" data-panel="afford">
-      <div>
-        <div class="field">
-          <label for="a-income">Gross annual household income <span class="val tnum" id="a-income-val">$110,000</span></label>
-          <input type="range" id="a-income" min="30000" max="500000" step="1000" value="110000">
-        </div>
-        <div class="field">
-          <label for="a-debts">Other monthly debt payments <span class="val tnum" id="a-debts-val">$350</span></label>
-          <input type="range" id="a-debts" min="0" max="5000" step="10" value="350">
-        </div>
-        <div class="field">
-          <label for="a-down">Down payment available <span class="val tnum" id="a-down-val">$60,000</span></label>
-          <input type="range" id="a-down" min="5000" max="1000000" step="1000" value="60000">
-        </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="a-rate">Contract rate <span class="val tnum" id="a-rate-val">5.25%</span></label>
-            <input type="range" id="a-rate" min="2" max="9" step="0.05" value="5.25">
-          </div>
-          <div class="field">
-            <label for="a-amort">Amortization <span class="val tnum" id="a-amort-val">25 yrs</span></label>
-            <input type="range" id="a-amort" min="5" max="30" step="1" value="25">
-          </div>
-        </div>
-      </div>
-      <div class="statement" aria-live="polite">
-        <h4>Estimated maximum purchase price</h4>
-        <div class="statement-figure tnum" id="af-out-price">$0</div>
-        <p class="statement-sub">Based on a stress-tested qualifying rate, not your contract rate.</p>
-        <hr class="statement-rule">
-        <div class="statement-line"><span>Qualifying rate used</span><b class="tnum" id="af-out-qrate">—</b></div>
-        <div class="statement-line"><span>Max monthly housing cost (GDS 39%)</span><b class="tnum" id="af-out-gds">—</b></div>
-        <div class="statement-line"><span>Max total debt service (TDS 44%)</span><b class="tnum" id="af-out-tds">—</b></div>
-        <div class="statement-line"><span>Maximum mortgage amount</span><b class="tnum" id="af-out-loan">—</b></div>
-        <p class="statement-note">Simplified estimate using standard GDS/TDS guidelines and the federal stress test. Actual qualification varies by lender.</p>
-      </div>
-    </div>
-
-    <!-- LTT calculator -->
-    <div class="calc-panel" data-panel="ltt">
-      <div>
-        <div class="field">
-          <label for="l-price">Purchase price <span class="val tnum" id="l-price-val">$650,000</span></label>
-          <input type="range" id="l-price" min="100000" max="3000000" step="5000" value="650000">
-        </div>
-        <div class="field">
-          <label for="l-province">Province</label>
-          <select id="l-province">
-            <option value="ON">Ontario</option>
-            <option value="BC">British Columbia</option>
-          </select>
-        </div>
-        <div class="checkbox-field" id="l-toronto-wrap">
-          <input type="checkbox" id="l-toronto">
-          <label for="l-toronto">Property is in the City of Toronto (adds municipal LTT)</label>
-        </div>
-        <div class="checkbox-field">
-          <input type="checkbox" id="l-first-time" checked>
-          <label for="l-first-time">I'm a first-time home buyer</label>
-        </div>
-      </div>
-      <div class="statement" aria-live="polite">
-        <h4>Estimated land transfer tax</h4>
-        <div class="statement-figure tnum" id="l-out-total">$0</div>
-        <p class="statement-sub">After any first-time buyer rebate.</p>
-        <hr class="statement-rule">
-        <div class="statement-line"><span>Provincial LTT</span><b class="tnum" id="l-out-prov">—</b></div>
-        <div class="statement-line" id="l-out-muni-row"><span>Toronto municipal LTT</span><b class="tnum" id="l-out-muni">—</b></div>
-        <div class="statement-line"><span>First-time buyer rebate</span><b class="tnum" id="l-out-rebate">—</b></div>
-        <p class="statement-note">Ontario and BC estimates based on current published brackets. Confirm exact figures with your real estate lawyer.</p>
-      </div>
+    <div style="background:#FAF7EF;border-radius:6px;padding:2rem;box-shadow:0 1px 2px rgba(10,27,51,0.06),0 8px 24px rgba(10,27,51,0.06)">
+      <!-- Bendigi Calculators -->
+      <div class="bendigi-calculators" apikey="e6e7aed6dfb5c9f6:wI3-VmLSVlEKO5VDHvptRVmJVLSq0fqU" terms="https://canadianmortgageapp.com/terms" navPositionTop="0px" navPositionTopMobile="0px" tools="all"></div>
+      <script src="https://tools.bendigi.com/assets/calculators.js"></script>
     </div>
   </div>
 </section>
@@ -883,212 +743,4 @@ document.getElementById('contact-form').addEventListener('submit', (e) => {
   document.getElementById('form-success').classList.add('active');
 });
 
-/* Calculator tabs */
-document.querySelectorAll('.calc-tab').forEach(tab => tab.addEventListener('click', () => {
-  document.querySelectorAll('.calc-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
-  document.querySelectorAll('.calc-panel').forEach(p => p.classList.remove('active'));
-  tab.classList.add('active'); tab.setAttribute('aria-selected','true');
-  document.querySelector('.calc-panel[data-panel="'+tab.dataset.tab+'"]').classList.add('active');
-}));
-
-/* Formatting helpers */
-const fmt$ = (n) => '$' + Math.round(n).toLocaleString('en-CA');
-const fmt$2 = (n) => '$' + n.toLocaleString('en-CA', {minimumFractionDigits:2, maximumFractionDigits:2});
-
-function periodicRate(annualRate, paymentsPerYear){
-  const semiAnnual = annualRate/100/2;
-  const effectiveAnnual = Math.pow(1+semiAnnual, 2) - 1;
-  return Math.pow(1+effectiveAnnual, 1/paymentsPerYear) - 1;
-}
-function cmhcRate(ltvPercent){
-  if (ltvPercent <= 65) return 0.006;
-  if (ltvPercent <= 75) return 0.017;
-  if (ltvPercent <= 80) return 0.024;
-  if (ltvPercent <= 85) return 0.028;
-  if (ltvPercent <= 90) return 0.031;
-  return 0.04;
-}
-
-/* ---- Mortgage payment calculator ---- */
-const pPrice = document.getElementById('p-price'), pDown = document.getElementById('p-down'),
-      pRate = document.getElementById('p-rate'), pAmort = document.getElementById('p-amort'),
-      pFreq = document.getElementById('p-freq');
-
-function calcPayment(){
-  const price = +pPrice.value;
-  const downPct = +pDown.value;
-  const downAmt = price * downPct/100;
-  const rate = +pRate.value;
-  const amortYears = +pAmort.value;
-  const freqVal = pFreq.value;
-
-  document.getElementById('p-price-val').textContent = fmt$(price);
-  document.getElementById('p-down-val').textContent = downPct + '% · ' + fmt$(downAmt);
-  document.getElementById('p-rate-val').textContent = rate.toFixed(2) + '%';
-  document.getElementById('p-amort-val').textContent = amortYears + ' yrs';
-
-  let principal = price - downAmt;
-  const ltv = (principal/price)*100;
-  let cmhcPremium = 0;
-  let cmhcNote = 'Down payment is 20% or more — no default insurance required.';
-  if (downPct < 20) {
-    const rate2 = cmhcRate(ltv);
-    cmhcPremium = principal * rate2;
-    principal += cmhcPremium;
-    cmhcNote = 'Insured mortgage — premium added to loan amount, not paid upfront.';
-  }
-
-  let paymentsPerYear, label;
-  if (freqVal === '12') { paymentsPerYear = 12; label = ' / month'; }
-  else if (freqVal === '26') { paymentsPerYear = 26; label = ' / bi-weekly'; }
-  else if (freqVal === '52') { paymentsPerYear = 52; label = ' / week'; }
-  else { paymentsPerYear = 26; label = ' / bi-weekly (accelerated)'; }
-
-  const n = amortYears * (freqVal === '26a' ? 12 : paymentsPerYear); // base on monthly count for accelerated calc below
-  const monthlyR = periodicRate(rate, 12);
-  const totalMonths = amortYears*12;
-  const monthlyPayment = principal * monthlyR / (1 - Math.pow(1+monthlyR, -totalMonths));
-
-  let payment, totalPaid;
-  if (freqVal === '12') {
-    payment = monthlyPayment;
-    totalPaid = payment * totalMonths;
-  } else if (freqVal === '26') {
-    payment = (monthlyPayment * 12) / 26;
-    totalPaid = payment * 26 * amortYears;
-  } else if (freqVal === '52') {
-    payment = (monthlyPayment * 12) / 52;
-    totalPaid = payment * 52 * amortYears;
-  } else { // accelerated bi-weekly
-    payment = monthlyPayment / 2;
-    totalPaid = payment * 26 * amortYears; // approximate; accelerated pays off faster in reality
-  }
-  const totalInterest = totalPaid - principal;
-
-  document.getElementById('p-out-payment').innerHTML = fmt$2(payment) + '<small>' + label + '</small>';
-  document.getElementById('p-out-cmhc-note').textContent = cmhcNote;
-  document.getElementById('p-out-loan').textContent = fmt$(principal);
-  document.getElementById('p-out-cmhc').textContent = cmhcPremium > 0 ? fmt$(cmhcPremium) : '—';
-  document.getElementById('p-out-interest').textContent = fmt$(totalInterest);
-  document.getElementById('p-out-total').textContent = fmt$(totalPaid);
-}
-[pPrice,pDown,pRate,pAmort,pFreq].forEach(el => el.addEventListener('input', calcPayment));
-
-/* ---- Affordability calculator ---- */
-const aIncome = document.getElementById('a-income'), aDebts = document.getElementById('a-debts'),
-      aDown = document.getElementById('a-down'), aRate = document.getElementById('a-rate'), aAmort = document.getElementById('a-amort');
-
-function calcAfford(){
-  const income = +aIncome.value, debts = +aDebts.value, down = +aDown.value, rate = +aRate.value, amortYears = +aAmort.value;
-  document.getElementById('a-income-val').textContent = fmt$(income);
-  document.getElementById('a-debts-val').textContent = fmt$(debts);
-  document.getElementById('a-down-val').textContent = fmt$(down);
-  document.getElementById('a-rate-val').textContent = rate.toFixed(2) + '%';
-  document.getElementById('a-amort-val').textContent = amortYears + ' yrs';
-
-  const monthlyIncome = income/12;
-  const qRate = Math.max(rate + 2, 5.25);
-  const heat = 100; // estimated monthly heating cost
-  const gdsMax = monthlyIncome * 0.39;
-  const tdsMax = monthlyIncome * 0.44 - debts;
-  const maxHousing = Math.min(gdsMax, tdsMax + heat + 250); // +250 est. property tax buffer factored below more precisely
-  // Estimate property tax as 1% of price/12 -> iterative-ish: assume housing cost = payment + tax + heat
-  // Solve: maxPayment = maxHousing - heat - estTax; estTax depends on price, approximate with 0.9%/yr of loan+down
-  let maxPayment = Math.max(0, Math.min(gdsMax, tdsMax) - heat);
-  // subtract a rough property-tax estimate (1% of an assumed price ~ payment*180) via two-pass approximation
-  for (let i=0;i<5;i++){
-    const n = amortYears*12;
-    const r = periodicRate(qRate,12);
-    const impliedLoan = maxPayment * (1-Math.pow(1+r,-n)) / r;
-    const impliedPrice = impliedLoan + down;
-    const estTax = (impliedPrice*0.01)/12;
-    maxPayment = Math.max(0, Math.min(gdsMax, tdsMax) - heat - estTax);
-  }
-  const n = amortYears*12;
-  const r = periodicRate(qRate,12);
-  const maxLoan = maxPayment * (1-Math.pow(1+r,-n)) / r;
-  const maxPrice = maxLoan + down;
-
-  document.getElementById('af-out-price').textContent = fmt$(maxPrice);
-  document.getElementById('af-out-qrate').textContent = qRate.toFixed(2) + '%';
-  document.getElementById('af-out-gds').textContent = fmt$(gdsMax);
-  document.getElementById('af-out-tds').textContent = fmt$(Math.max(0,tdsMax));
-  document.getElementById('af-out-loan').textContent = fmt$(Math.max(0,maxLoan));
-}
-[aIncome,aDebts,aDown,aRate,aAmort].forEach(el => el.addEventListener('input', calcAfford));
-
-/* ---- Land transfer tax calculator ---- */
-const lPrice = document.getElementById('l-price'), lProvince = document.getElementById('l-province'),
-      lToronto = document.getElementById('l-toronto'), lFirstTime = document.getElementById('l-first-time'),
-      lTorontoWrap = document.getElementById('l-toronto-wrap'), lMuniRow = document.getElementById('l-out-muni-row');
-
-function ontarioLTT(price){
-  let tax = 0;
-  const brackets = [[55000,0.005],[250000,0.01],[400000,0.015],[2000000,0.02],[Infinity,0.025]];
-  let prev = 0;
-  for (const [cap,rate] of brackets){
-    if (price > prev){
-      tax += (Math.min(price,cap)-prev)*rate;
-      prev = cap;
-    }
-  }
-  return tax;
-}
-function torontoMLTT(price){
-  let tax = 0;
-  const brackets = [[55000,0.005],[250000,0.01],[400000,0.015],[2000000,0.02],[3000000,0.025],[4000000,0.035],[5000000,0.045],[Infinity,0.055]];
-  let prev = 0;
-  for (const [cap,rate] of brackets){
-    if (price > prev){
-      tax += (Math.min(price,cap)-prev)*rate;
-      prev = cap;
-    }
-  }
-  return tax;
-}
-function bcPTT(price){
-  let tax = 0;
-  const brackets = [[200000,0.01],[2000000,0.02],[3000000,0.03],[Infinity,0.05]];
-  let prev = 0;
-  for (const [cap,rate] of brackets){
-    if (price > prev){
-      tax += (Math.min(price,cap)-prev)*rate;
-      prev = cap;
-    }
-  }
-  return tax;
-}
-
-function calcLTT(){
-  const price = +lPrice.value;
-  document.getElementById('l-price-val').textContent = fmt$(price);
-  const province = lProvince.value;
-  lTorontoWrap.style.display = province === 'ON' ? '' : 'none';
-  lMuniRow.style.display = (province === 'ON' && lToronto.checked) ? '' : 'none';
-
-  let prov = 0, muni = 0, rebate = 0;
-  if (province === 'ON'){
-    prov = ontarioLTT(price);
-    if (lToronto.checked) muni = torontoMLTT(price);
-    if (lFirstTime.checked){
-      rebate += Math.min(4000, prov);
-      if (lToronto.checked) rebate += Math.min(4475, muni);
-    }
-  } else {
-    prov = bcPTT(price);
-    if (lFirstTime.checked){
-      if (price <= 500000) rebate = prov;
-      else if (price < 525000) rebate = prov * (1 - (price-500000)/25000);
-    }
-  }
-  const total = Math.max(0, prov + muni - rebate);
-  document.getElementById('l-out-total').textContent = fmt$(total);
-  document.getElementById('l-out-prov').textContent = fmt$(prov);
-  document.getElementById('l-out-muni').textContent = fmt$(muni);
-  document.getElementById('l-out-rebate').textContent = '-' + fmt$(rebate);
-}
-[lPrice,lProvince,lToronto,lFirstTime].forEach(el => el.addEventListener('input', calcLTT));
-
-/* Init */
-calcPayment(); calcAfford(); calcLTT();
 </script>

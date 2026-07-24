@@ -3,10 +3,18 @@ import { site } from "@/lib/site";
 
 /**
  * Only live routes belong here. Entries are added as each phase ships —
- * listing a 404 in the sitemap is a crawl-budget and quality signal problem.
+ * listing a 404 in the sitemap is a crawl-budget and quality-signal problem.
  */
-const routes: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
-  { path: "/", priority: 1, changeFrequency: "monthly" },
+const routes: {
+  path: string;
+  priority: number;
+  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+}[] = [
+  { path: "/", priority: 1.0, changeFrequency: "monthly" },
+  { path: "/about", priority: 0.8, changeFrequency: "yearly" },
+  { path: "/contact", priority: 0.8, changeFrequency: "yearly" },
+  { path: "/apply", priority: 0.9, changeFrequency: "yearly" },
+  { path: "/privacy", priority: 0.2, changeFrequency: "yearly" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

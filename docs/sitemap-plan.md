@@ -13,7 +13,6 @@
 /about                                     E-E-A-T anchor
 /contact                                   Form + NAP
 /apply                                     Framing page → Velocity application
-/book                                      Framing page → Calendly
 
 /mortgages/renewal                         ◄ priority 1
 /mortgages/first-time-buyer                ◄ priority 2
@@ -37,6 +36,8 @@
 
 /privacy
 ```
+
+**Changed in Phase 2:** `/book` was dropped as a page. A framing page ahead of Calendly adds a click before a low-commitment action, which costs conversions for no benefit — Calendly sets its own expectations. Booking CTAs link out directly. `/apply` keeps its framing page because a full mortgage application is a significant commitment, and dropping people into a bare third-party form with no context is where applications get abandoned.
 
 **Deliberately not built:** `/mortgages/new-construction` and `/mortgages/private-lending`. Both are real services with no distinct content yet. New construction becomes a section on `/mortgages/first-time-buyer` and `/mortgages/investment-property`; private/alternative lending becomes a section on `/mortgages/refinance`. They graduate to pages when there is 1,000+ words of genuinely distinct material.
 

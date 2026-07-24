@@ -162,3 +162,4 @@ Server-side validation, honeypot, rate limiting. Designed success *and* failure 
 - Aurora Chamber listing under *Mortgage Architects* — stale citation, remove or correct
 - Resend account + DNS records
 - **Analytics deferred by request.** No GA4, no Search Console. Until these exist there is no feedback loop on which pages rank or convert, and the SEO work is running blind. Revisit before Phase 5.
+- **`/privacy` has not been legally reviewed.** Drafted in Phase 2 to describe the site's actual data handling accurately, but it has not been through Mortgagebroker.ca compliance or a lawyer. Must be reviewed before the rebuild replaces production. If data handling changes — analytics added, CRM integrated, chat widget installed — the page must change with it.

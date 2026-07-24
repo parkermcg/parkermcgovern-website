@@ -1,0 +1,164 @@
+# CLAUDE.md — Parker McGovern Mortgage Website
+
+Working standards for this repo. Keep current as decisions change; future sessions depend on it.
+
+**Planning docs:** [`docs/content-inventory.md`](docs/content-inventory.md) · [`docs/sitemap-plan.md`](docs/sitemap-plan.md) · [`docs/design-plan.md`](docs/design-plan.md)
+
+---
+
+## 1. What this site is for
+
+In priority order: **generate qualified leads**, **rank organically**, **educate**. Design quality serves those three; it is not a fourth goal. A beautiful page that doesn't convert has failed.
+
+Independent FSRA-licensed agent competing against banks and national brokerages. Organic search is the primary acquisition channel.
+
+---
+
+## 2. Stack — do not deviate without asking
+
+- Next.js (App Router) + TypeScript + Tailwind
+- **Static by default.** Anything that must rank is server-rendered in the initial HTML. Verify with `curl` and View Source, never the browser inspector — the inspector shows the hydrated DOM and will lie to you.
+- Article and service content lives in MDX / a typed content layer. **Adding an article must never require touching a component.**
+- `next/image` and `next/font` throughout. No raw `<img>`, no font CDN links, no base64-embedded fonts.
+- Deploys from GitHub `main` → Vercel.
+- No CMS, no database, no headless backend without explicit approval.
+- Minimal dependencies. Justify every package in one line. Prefer 40 lines of code over a library.
+
+### The client-rendering trap
+
+The prototype embedded two third-party widgets. Both looked correct in a browser and contributed **zero** indexable content:
+
+- Elfsight reviews — client-mounted, shadow DOM, 0 reviewer names in source
+- Bendigi calculators — client-mounted, 0 bytes in source
+
+Total crawlable content for the whole prototype was **1,422 words**. Any third-party embed proposed from here gets the `curl` test before it ships.
+
+---
+
+## 3. Verified facts — the source of truth
+
+Do not restate any business fact from memory. It is either here or it gets verified.
+
+| | |
+|---|---|
+| Name | Parker McGovern |
+| Title | Mortgage Agent, Level 2 |
+| Agent licence | **M21002541** |
+| Brokerage | Mortgagebroker.ca |
+| Brokerage licence | **12707** |
+| Regulator | FSRA (Financial Services Regulatory Authority of Ontario) |
+| Address | 65B West Beaver Creek Rd, Richmond Hill, ON **L4B 1K4** |
+| Phone | 647-453-1222 |
+| Email | parker@mortgagebroker.ca |
+| Hours | Mon–Fri 7:30am–6:00pm · Sat–Sun 12:00pm–6:00pm |
+| Domain | parkermcgovern.ca (Vercel; DNS at Squarespace) |
+| Booking | https://calendly.com/mortgageagent |
+| Application | https://velocity.newton.ca/sso/public.php?sc=2xreedfpzly7 |
+| Education | B.Comm, Real Estate & Housing — University of Guelph |
+| Reviews | 45 genuine Google reviews, 5.0★ |
+| Service area | Richmond Hill / York Region / GTA |
+
+**Known conflict:** GBP shows postal code `L4B 1K4`; the Mortgagebroker.ca team page shows `L4B 1Y4` for the same street address. Site uses `L4B 1K4` per GBP. The other citation should be corrected at source.
+
+**Confirmed true, safe to state:** Parker tracks client renewal dates and rate environment on an ongoing basis. A specific lender count is publishable — **number still needed** before any figure appears.
+
+---
+
+## 4. Compliance — non-negotiable
+
+**Approved footer wording. Use verbatim, do not paraphrase:**
+
+> Regulatory notice: Parker McGovern is a licensed Mortgage Agent (Level 2), Lic. #M21002541, registered with Mortgagebroker.ca, Brokerage Lic. #12707, a mortgage brokerage regulated by the Financial Services Regulatory Authority of Ontario (FSRA). Rates, payments, and qualification figures shown throughout this site are estimates for illustrative purposes only, are not a commitment to lend, and are subject to change and lender approval.
+
+Brokerage name, brokerage licence, and agent licence appear in the footer sitewide **and** on every page discussing rates or products.
+
+**Never invent.** No testimonials, client names, review counts, star ratings, dollar-value stats, years of experience, mortgage volumes, lender counts, or business hours. If a number isn't in §3, it doesn't ship.
+
+> Prototype history, kept as a guardrail: "12+ years," "$220M+ funded," "500+ mortgages since 2014," "4.9/5 rating," "18 families this month," six named testimonials, and a full set of business hours were all fabricated and later removed. Parker has roughly three years in the industry — **years-of-experience is not an available trust lever.** Trust is earned through the education content, the real reviews, and the credentials.
+
+**Rates and figures.** No specific interest rate, APR, or payment example unless Parker supplies it. Where one appears it carries a date stamp and a rates-subject-to-change / OAC qualifier. Calculator outputs are labelled estimates *visibly, adjacent to the result* — not in a footnote.
+
+**Review schema is prohibited.** The 45 reviews are real but hosted on Google. `AggregateRating` / `Review` markup on our own domain is outside Google's guidelines and risks a manual action. Display them, link to the profile, never mark them up.
+
+**Primary sources only** for regulatory facts, cited on the page: CMHC, FSRA, CRA, Ontario Ministry of Finance, City of Toronto, OSFI.
+
+---
+
+## 5. SEO rules
+
+**The cannibalization test:** if two pages could swap body copy without anyone noticing, they are one page. Applied before any new page is created.
+
+**No per-town pages.** GTA municipalities share identical LTT treatment and lender access; per-town pages are the doorway pattern. Reach is signalled via `areaServed` in schema plus one `/service-areas` page. Toronto is the sole exception and earns it through the Municipal Land Transfer Tax.
+
+**Tiering.** Only the six ranked money pages in `docs/sitemap-plan.md` get standalone pages. Anything else is a section on a parent page, or ships `noindex` with a flag to Parker — never a thin page.
+
+**E-E-A-T.** YMYL content. Every article carries a named author with credentials and licence number, a visible last-updated date, and primary-source citations.
+
+**Per page:** one `<h1>`, semantic heading order, hand-written metadata (never templated), canonical, OG/Twitter cards, breadcrumbs.
+
+---
+
+## 6. Design
+
+Full system in [`docs/design-plan.md`](docs/design-plan.md). Summary:
+
+`--ground` `#0B1A2E` · `--ground-raised` `#14263F` · `--paper` `#FBF9F5` · `--ink` `#111F35` · `--ink-muted` `#56637A` · `--brass` `#A9803C` (accent, sparing) / `--brass-light` `#DFC48D` on navy
+
+Semantic, always separate from the brand accent: `--positive` `#1C6B52` · `--caution` `#8A5F14` · `--critical` `#9C3A31`
+
+Fraunces (display) · Public Sans (body) · IBM Plex Mono (all figures, tabular). Sections alternate navy → warm. Signature element is the **statement card**. Motion is one page-load sequence plus state transitions; no scroll reveals.
+
+**Voice:** plain verbs, sentence case including buttons, specific over clever. Buttons say what happens — "Book a call," not "Submit." Every money page includes the honest case *against* acting; it is the strongest available trust signal and it is what E-E-A-T rewards.
+
+---
+
+## 7. Conventions
+
+```
+app/                 routes
+components/          ui/ (primitives) · sections/ (composed blocks)
+content/             guides/*.mdx · services/*.mdx
+lib/                 calculators/ (pure fns + tests) · seo/ (metadata, schema)
+docs/                planning artifacts
+```
+
+Calculator math lives in `lib/calculators/` as pure, unit-tested functions — never inline in components. Every rate constant carries a source URL and a verified-on date in a comment.
+
+Small, reviewable commits with clear messages. Conventional prefixes (`feat:`, `fix:`, `docs:`, `refactor:`).
+
+---
+
+## 8. Definition of done
+
+Verified, not asserted:
+
+- `npm run build` clean · zero TS errors · zero console errors or warnings
+- Lighthouse mobile: Performance ≥ 90 · Accessibility ≥ 95 · Best Practices ≥ 95 · **SEO = 100**
+- Core Web Vitals green on throttled mobile
+- WCAG 2.2 AA — keyboard navigable, visible focus, contrast, heading order, labelled controls, meaningful alt text
+- Renders at 320 / 768 / 1440 / 1920
+- **Every indexable page appears in full in `curl` output**
+- Structured data validates in Google's Rich Results Test
+- No placeholder copy, no lorem ipsum, no fabricated anything
+- All §4 compliance elements present
+
+---
+
+## 9. Lead capture
+
+Both paths live:
+- **Apply** → Velocity/Newton (full application)
+- **Contact form** → name, email, phone, message → emails parker@mortgagebroker.ca **and** appends to a durable store
+
+Server-side validation, honeypot, rate limiting. Designed success *and* failure states — a silent failure is a lost client. Requires a Resend account and SPF/DKIM records on parkermcgovern.ca at Squarespace; without domain verification, mail to a `@mortgagebroker.ca` address risks spam filtering.
+
+---
+
+## 10. Open items
+
+- GBP business name and phone, exactly as displayed
+- Verified lender count
+- Postal code conflict (§3) corrected at source
+- Aurora Chamber listing under *Mortgage Architects* — stale citation, remove or correct
+- Resend account + DNS records
+- **Analytics deferred by request.** No GA4, no Search Console. Until these exist there is no feedback loop on which pages rank or convert, and the SEO work is running blind. Revisit before Phase 5.

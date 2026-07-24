@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
 import { servicePages } from "@/lib/content/services";
+import { calculatorPages } from "@/lib/content/calculators";
 
 /**
  * Only live routes belong here. Entries are added as each phase ships —
@@ -18,6 +19,12 @@ const routes: {
   { path: "/privacy", priority: 0.2, changeFrequency: "yearly" },
   ...servicePages.map((p) => ({
     path: `/mortgages/${p.slug}`,
+    priority: 0.9,
+    changeFrequency: "monthly" as const,
+  })),
+  { path: "/calculators", priority: 0.8, changeFrequency: "monthly" as const },
+  ...calculatorPages.map((c) => ({
+    path: `/calculators/${c.slug}`,
     priority: 0.9,
     changeFrequency: "monthly" as const,
   })),

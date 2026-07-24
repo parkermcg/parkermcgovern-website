@@ -1,5 +1,6 @@
 import type { ServicePage } from "./types";
 
+import renewal from "@/content/services/renewal";
 import alternativeLending from "@/content/services/alternative-lending";
 import firstTimeBuyer from "@/content/services/first-time-buyer";
 import refinance from "@/content/services/refinance";
@@ -14,6 +15,7 @@ import newToCanada from "@/content/services/new-to-canada";
  * plus one array entry. No component changes required.
  */
 export const servicePages: ServicePage[] = [
+  renewal,
   alternativeLending,
   firstTimeBuyer,
   refinance,

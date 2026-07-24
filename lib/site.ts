@@ -84,6 +84,7 @@ export const calculators = [
 ] as const;
 
 export const nav = [
+  { href: "/mortgages/renewal", label: "Renewal" },
   { href: "/mortgages/alternative-lending", label: "Alternative lending" },
   { href: "/mortgages/first-time-buyer", label: "First-time buyers" },
   { href: "/calculators", label: "Calculators" },

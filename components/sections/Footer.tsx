@@ -1,10 +1,6 @@
 import Link from "next/link";
-import {
-  site,
-  services,
-  calculators,
-  formattedAddress,
-} from "@/lib/site";
+import { site, calculators, formattedAddress } from "@/lib/site";
+import { servicePages } from "@/lib/content/services";
 import { Container } from "@/components/ui/Container";
 
 /**
@@ -39,13 +35,13 @@ export function Footer() {
               How I help
             </h2>
             <ul className="space-y-2.5 text-small">
-              {services.map((s) => (
+              {servicePages.map((s) => (
                 <li key={s.slug}>
                   <Link
                     href={`/mortgages/${s.slug}`}
                     className="transition-colors hover:text-brass-light"
                   >
-                    {s.title}
+                    {s.eyebrow}
                   </Link>
                 </li>
               ))}

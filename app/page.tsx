@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { site, services, calculators } from "@/lib/site";
+import { site, calculators } from "@/lib/site";
+import { servicePages } from "@/lib/content/services";
 import { pageMetadata } from "@/lib/seo/metadata";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
@@ -131,14 +132,14 @@ export default function HomePage() {
             </h2>
           </div>
           <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((s) => (
+            {servicePages.map((s) => (
               <li key={s.slug}>
                 <Link
                   href={`/mortgages/${s.slug}`}
                   className="group flex h-full flex-col rounded-[6px] border border-rule bg-paper-raised p-7 transition-colors hover:border-brass"
                 >
-                  <h3 className="text-h3 text-ink">{s.title}</h3>
-                  <p className="mt-3 text-ink-muted">{s.blurb}</p>
+                  <h3 className="text-h3 text-ink">{s.eyebrow}</h3>
+                  <p className="mt-3 text-ink-muted">{s.summary}</p>
                   <span className="mt-5 text-small font-semibold text-brass group-hover:underline">
                     Read more →
                   </span>

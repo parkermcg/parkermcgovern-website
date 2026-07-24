@@ -74,46 +74,6 @@ export const site = {
 
 export const formattedAddress = `${site.address.street}, ${site.address.locality}, ${site.address.region} ${site.address.postalCode}`;
 
-/** The six money pages, in priority order — docs/sitemap-plan.md §2. */
-export const services = [
-  {
-    slug: "renewal",
-    title: "Mortgage renewal",
-    blurb:
-      "Your lender's renewal letter is an opening offer, not a final one. See what the rest of the market will do before you sign it.",
-  },
-  {
-    slug: "first-time-buyer",
-    title: "First-time buyers",
-    blurb:
-      "What you actually need for a down payment, what closing really costs, and how much you can borrow — explained without jargon.",
-  },
-  {
-    slug: "refinance",
-    title: "Refinance & debt consolidation",
-    blurb:
-      "Access the equity you've built, or fold high-interest debt into one lower payment. Including when it isn't worth doing.",
-  },
-  {
-    slug: "self-employed",
-    title: "Self-employed",
-    blurb:
-      "Write-offs that cut your tax bill also cut your provable income. There are lenders who understand that. Banks often don't.",
-  },
-  {
-    slug: "investment-property",
-    title: "Investment property",
-    blurb:
-      "Financing for rentals and small multi-unit buildings, and how lenders treat rental income when they qualify you.",
-  },
-  {
-    slug: "new-to-canada",
-    title: "New to Canada",
-    blurb:
-      "Newcomer programs exist for people without Canadian credit history. Limited credit is not the dead end it feels like.",
-  },
-] as const;
-
 /** Five calculators, each its own indexable page — docs/sitemap-plan.md §3. */
 export const calculators = [
   { slug: "mortgage-payment", title: "Mortgage payment", blurb: "What your payment looks like at different rates, terms and frequencies." },
@@ -124,7 +84,7 @@ export const calculators = [
 ] as const;
 
 export const nav = [
-  { href: "/mortgages/renewal", label: "Renewal" },
+  { href: "/mortgages/alternative-lending", label: "Alternative lending" },
   { href: "/mortgages/first-time-buyer", label: "First-time buyers" },
   { href: "/calculators", label: "Calculators" },
   { href: "/guides", label: "Guides" },

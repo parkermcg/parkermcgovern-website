@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
+import { servicePages } from "@/lib/content/services";
 
 /**
  * Only live routes belong here. Entries are added as each phase ships —
@@ -15,6 +16,11 @@ const routes: {
   { path: "/contact", priority: 0.8, changeFrequency: "yearly" },
   { path: "/apply", priority: 0.9, changeFrequency: "yearly" },
   { path: "/privacy", priority: 0.2, changeFrequency: "yearly" },
+  ...servicePages.map((p) => ({
+    path: `/mortgages/${p.slug}`,
+    priority: 0.9,
+    changeFrequency: "monthly" as const,
+  })),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -29,7 +29,7 @@ Six values, each with one job.
 | `--paper` | `#FBF9F5` | Warm near-white. Reading surface: guides, calculators, long-form. |
 | `--ink` | `#111F35` | Primary text on `--paper`. Navy-biased, never pure black. |
 | `--ink-muted` | `#56637A` | Secondary text, captions, labels. |
-| `--brass` | `#8A6A2E` | The accent. Sparingly. `--brass-light` `#DFC48D` when on navy. |
+| `--brass` | `#A9803C` | The accent. Sparingly. `--brass-light` `#DFC48D` when on navy. |
 
 **Justifications.**
 
@@ -38,8 +38,6 @@ Six values, each with one job.
 `--paper` is warm rather than pure white because the content strategy is long-form education. Fifteen articles of 1,000+ words is a lot of reading, and pure white at full brightness is fatiguing. It also warms the navy, which alone reads clinical.
 
 `--ink` carries a navy bias rather than being neutral grey or black — a mid grey reads unconsidered, and the hue tie to `--ground` makes the two surfaces feel like one system.
-
-**Revised in Phase 5:** the accent was originally `#A9803C`, chosen for how it read rather than how it measured. It failed WCAG AA in both directions — 3.41:1 as text on paper and 3.60:1 behind white text. Darkened to `#8A6A2E`, which clears AA at 4.78:1 and 5.02:1 while staying the same colour family. See docs/audit.md §2.1.
 
 `--brass` earns its place by restraint. It marks exactly three things: the primary action, the active navigation state, and the hairline rules on statement cards. When an accent appears on everything it stops meaning anything.
 

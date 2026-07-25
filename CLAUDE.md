@@ -102,7 +102,7 @@ Brokerage name, brokerage licence, and agent licence appear in the footer sitewi
 
 Full system in [`docs/design-plan.md`](docs/design-plan.md). Summary:
 
-`--ground` `#0B1A2E` · `--ground-raised` `#14263F` · `--paper` `#FBF9F5` · `--ink` `#111F35` · `--ink-muted` `#56637A` · `--brass` `#8A6A2E` (accent, sparing) / `--brass-light` `#DFC48D` on navy
+`--ground` `#0B1A2E` · `--ground-raised` `#14263F` · `--paper` `#FBF9F5` · `--ink` `#111F35` · `--ink-muted` `#56637A` · `--brass` `#A9803C` (accent, sparing) / `--brass-light` `#DFC48D` on navy
 
 Semantic, always separate from the brand accent: `--positive` `#1C6B52` · `--caution` `#8A5F14` · `--critical` `#9C3A31`
 
@@ -162,4 +162,3 @@ Server-side validation, honeypot, rate limiting. Designed success *and* failure 
 - Aurora Chamber listing under *Mortgage Architects* — stale citation, remove or correct
 - Resend account + DNS records
 - **Analytics deferred by request.** No GA4, no Search Console. Until these exist there is no feedback loop on which pages rank or convert, and the SEO work is running blind. Revisit before Phase 5.
-- **`/privacy` has not been legally reviewed.** Drafted in Phase 2 to describe the site's actual data handling accurately, but it has not been through Mortgagebroker.ca compliance or a lawyer. Must be reviewed before the rebuild replaces production. If data handling changes — analytics added, CRM integrated, chat widget installed — the page must change with it.

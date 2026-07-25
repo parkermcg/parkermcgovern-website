@@ -112,3 +112,34 @@ export function faqSchema(items: { q: string; a: string }[]) {
     })),
   };
 }
+
+/**
+ * Article markup for guides. YMYL content requires an identifiable author
+ * with credentials, and dates that match what renders on the page.
+ */
+export function articleSchema({
+  title,
+  description,
+  path,
+  published,
+  updated,
+}: {
+  title: string;
+  description: string;
+  path: string;
+  published: string;
+  updated: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${site.url}${path}` },
+    datePublished: published,
+    dateModified: updated,
+    author: { "@id": `${site.url}/#parker` },
+    publisher: { "@id": `${site.url}/#business` },
+    inLanguage: "en-CA",
+  };
+}

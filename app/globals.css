@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Design tokens — docs/design-plan.md
+   Six brand values, each with one job. Semantic colours are
+   deliberately separate from the accent and never substitute for it.
+   ============================================================ */
+
+@theme {
+  /* Surfaces */
+  --color-ground: #0b1a2e;
+  --color-ground-raised: #14263f;
+  --color-paper: #fbf9f5;
+  --color-paper-raised: #ffffff;
+
+  /* Text */
+  --color-ink: #111f35;
+  --color-ink-muted: #56637a;
+  --color-ink-invert: #f4f1ea;
+  --color-ink-invert-muted: #9aa8c0;
+
+  /* Accent — sparing: primary action, active nav, statement rules */
+  --color-brass: #8a6a2e;
+  --color-brass-light: #dfc48d;
+
+  /* Semantic — never used as brand accent */
+  --color-positive: #1c6b52;
+  --color-caution: #8a5f14;
+  --color-critical: #9c3a31;
+
+  /* Hairlines */
+  --color-rule: #e6e0d4;
+  --color-rule-invert: rgba(223, 196, 141, 0.22);
+
+  /* Typography */
+  --font-display: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
+  --font-sans: var(--font-public-sans), -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --text-display: 4rem;
+  --text-display--line-height: 1.04;
+  --text-display--letter-spacing: -0.021em;
+  --text-h1: 3rem;
+  --text-h1--line-height: 1.08;
+  --text-h1--letter-spacing: -0.016em;
+  --text-h2: 2.125rem;
+  --text-h2--line-height: 1.14;
+  --text-h2--letter-spacing: -0.011em;
+  --text-h3: 1.5rem;
+  --text-h3--line-height: 1.25;
+  --text-lede: 1.25rem;
+  --text-lede--line-height: 1.55;
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.68;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.55;
+  --text-eyebrow: 0.75rem;
+  --text-eyebrow--line-height: 1.2;
+  --text-eyebrow--letter-spacing: 0.14em;
+  --text-figure-lg: 2.75rem;
+  --text-figure-lg--line-height: 1.1;
+  --text-figure-lg--letter-spacing: -0.01em;
+
+  --radius-card: 6px;
+  --radius-pill: 3px;
+}
+
+/* Mobile step-down: 1.200 ratio instead of 1.333 */
+@media (max-width: 48rem) {
+  @theme {
+    --text-display: 2.5rem;
+    --text-h1: 2.125rem;
+    --text-h2: 1.75rem;
+    --text-h3: 1.3125rem;
+    --text-lede: 1.125rem;
+    --text-figure-lg: 2rem;
+  }
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-ground);
+    color: var(--color-ink-invert);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  /* Tabular figures everywhere numbers line up */
+  .font-mono, table, [data-figures] {
+    font-variant-numeric: tabular-nums;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brass-light);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--color-brass);
+    color: #fff;
+  }
+}
+
+/* ============================================================
+   Motion — one orchestrated load sequence, nothing else.
+   ============================================================ */
+
+@layer utilities {
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  .animate-rise {
+    animation: rise 400ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  }
+
+  /* Reading measure for long-form content */
+  .measure { max-width: 68ch; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-rise { transform: none !important; }
+}

@@ -1,6 +1,6 @@
 # Sitemap & Keyword Plan
 
-**Decided:** renewal-led service priority, with first-time-buyer content built out in depth
+**Decided:** renewal-led, then changed in Phase 3 — see the note below. First-time-buyer content is built out in depth either way.
 **Locale:** Richmond Hill, ON — serving the GTA
 **Rule enforced throughout:** if two pages could swap body copy without anyone noticing, they are one page.
 
@@ -13,9 +13,8 @@
 /about                                     E-E-A-T anchor
 /contact                                   Form + NAP
 /apply                                     Framing page → Velocity application
-/book                                      Framing page → Calendly
 
-/mortgages/renewal                         ◄ priority 1
+/mortgages/alternative-lending             ◄ priority 1
 /mortgages/first-time-buyer                ◄ priority 2
 /mortgages/refinance                       ◄ priority 3  (incl. debt consolidation)
 /mortgages/self-employed                   ◄ priority 4
@@ -37,6 +36,12 @@
 
 /privacy
 ```
+
+**Changed in Phase 3 — renewal replaced by alternative lending.** Parker asked for `/mortgages/renewal` to be swapped for a page on alternative and private lending strategies. Built as requested.
+
+The trade-off, recorded so it is a decision rather than a drift: renewal was priority 1 because it carries the highest intent and the shortest decision window, and the bank's auto-renewal letter is the softest competitive target available. Alternative lending is a genuine specialty and likely underserved by competitors, but it is a fraction of the search volume. **Recommendation on the table: bring renewal back as a seventh money page rather than losing it.** The renewal keyword and content plan in this document is deliberately left intact below for that purpose.
+
+**Changed in Phase 2:** `/book` was dropped as a page. A framing page ahead of Calendly adds a click before a low-commitment action, which costs conversions for no benefit — Calendly sets its own expectations. Booking CTAs link out directly. `/apply` keeps its framing page because a full mortgage application is a significant commitment, and dropping people into a bare third-party form with no context is where applications get abandoned.
 
 **Deliberately not built:** `/mortgages/new-construction` and `/mortgages/private-lending`. Both are real services with no distinct content yet. New construction becomes a section on `/mortgages/first-time-buyer` and `/mortgages/investment-property`; private/alternative lending becomes a section on `/mortgages/refinance`. They graduate to pages when there is 1,000+ words of genuinely distinct material.
 

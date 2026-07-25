@@ -87,7 +87,7 @@ export default function HomePage() {
             <div className="justify-self-center">
               <div className="relative aspect-square w-[min(320px,72vw)] overflow-hidden rounded-full ring-1 ring-brass/70">
                 <Image
-                  src="/parker-mcgovern.png"
+                  src="/parker-mcgovern.jpg"
                   alt={`${site.name}, ${site.role}`}
                   fill
                   priority

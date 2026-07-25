@@ -102,7 +102,7 @@ Brokerage name, brokerage licence, and agent licence appear in the footer sitewi
 
 Full system in [`docs/design-plan.md`](docs/design-plan.md). Summary:
 
-`--ground` `#0B1A2E` · `--ground-raised` `#14263F` · `--paper` `#FBF9F5` · `--ink` `#111F35` · `--ink-muted` `#56637A` · `--brass` `#A9803C` (accent, sparing) / `--brass-light` `#DFC48D` on navy
+`--ground` `#0B1A2E` · `--ground-raised` `#14263F` · `--paper` `#FBF9F5` · `--ink` `#111F35` · `--ink-muted` `#56637A` · `--brass` `#8A6A2E` (accent, sparing) / `--brass-light` `#DFC48D` on navy
 
 Semantic, always separate from the brand accent: `--positive` `#1C6B52` · `--caution` `#8A5F14` · `--critical` `#9C3A31`
 

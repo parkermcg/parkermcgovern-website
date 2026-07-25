@@ -8,7 +8,7 @@ type Variant = "primary" | "outline" | "quiet";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-brass text-white border-brass hover:bg-[#96702F] focus-visible:bg-[#96702F]",
+    "bg-brass text-white border-brass hover:bg-[#725825] focus-visible:bg-[#725825]",
   outline:
     "bg-transparent text-ink-invert border-rule-invert hover:border-brass-light hover:text-brass-light",
   quiet:

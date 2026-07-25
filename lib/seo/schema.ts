@@ -63,7 +63,7 @@ export function personSchema() {
     telephone: site.contact.phone,
     email: site.contact.email,
     url: `${site.url}/about`,
-    image: `${site.url}/parker-mcgovern.png`,
+    image: `${site.url}/parker-mcgovern.jpg`,
     worksFor: {
       "@type": "Organization",
       name: site.licence.brokerageName,

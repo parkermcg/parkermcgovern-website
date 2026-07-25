@@ -58,9 +58,10 @@ export default function AboutPage() {
             <div>
               <div className="relative aspect-square w-full max-w-[340px] overflow-hidden rounded-full ring-1 ring-brass/60">
                 <Image
-                  src="/parker-mcgovern.png"
+                  src="/parker-mcgovern.jpg"
                   alt={`${site.name}, ${site.role}`}
                   fill
+                  priority
                   sizes="(max-width: 1024px) 80vw, 340px"
                   className="object-cover object-top"
                 />

@@ -42,7 +42,7 @@ export function Slider({
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full accent-[#A9803C]"
+        className="w-full accent-[#8a6a2e]"
       />
     </div>
   );
@@ -143,7 +143,7 @@ export function Checkbox({
         type="checkbox"
         checked={checked}
         onChange={(e) => onChange(e.target.checked)}
-        className="mt-1 h-4 w-4 flex-none accent-[#A9803C]"
+        className="mt-1 h-4 w-4 flex-none accent-[#8a6a2e]"
       />
       <label htmlFor={id} className="text-small text-ink-invert-muted">
         {label}

@@ -17,7 +17,7 @@ export function AuthorBlock({ updated }: { updated: string }) {
     <div className="flex flex-wrap items-center gap-4 border-y border-rule-invert py-5">
       <div className="relative h-12 w-12 flex-none overflow-hidden rounded-full ring-1 ring-brass/60">
         <Image
-          src="/parker-mcgovern.png"
+          src="/parker-mcgovern.jpg"
           alt={site.name}
           fill
           sizes="48px"

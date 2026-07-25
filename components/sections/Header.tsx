@@ -58,7 +58,7 @@ export function Header() {
               href={site.links.book}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-[3px] bg-brass px-4 py-2.5 text-[0.85rem] font-semibold text-white transition-colors hover:bg-[#96702F]"
+              className="rounded-[3px] bg-brass px-4 py-2.5 text-[0.85rem] font-semibold text-white transition-colors hover:bg-[#725825]"
             >
               Book a call
             </a>

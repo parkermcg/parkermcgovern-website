@@ -127,7 +127,7 @@ export default function HomePage() {
       {/* Reviews — sits directly after the hero block, before services */}
       <Reviews
         items={featuredReviews(6)}
-        heading="Forty-five people have been through this with me."
+        heading="Countless families have been through this with me."
         surface="paper"
       />
 

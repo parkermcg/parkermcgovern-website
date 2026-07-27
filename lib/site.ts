@@ -8,6 +8,16 @@
 export const site = {
   name: "Parker McGovern",
   role: "Mortgage Agent, Level 2",
+
+  /**
+   * The listing name exactly as the Google Business Profile displays it.
+   * Used for LocalBusiness schema, where NAP must match GBP character for
+   * character. Distinct from `name`, which is the person.
+   */
+  businessName: "Parker McGovern Mortgage Agent",
+
+  /** Verified by Parker 2026-07-25. Safe to publish — CLAUDE.md §3. */
+  lenderCount: "40+",
   url: "https://parkermcgovern.ca",
 
   licence: {

@@ -31,7 +31,7 @@ export function localBusinessSchema() {
     "@context": "https://schema.org",
     "@type": ["FinancialService", "LocalBusiness"],
     "@id": `${site.url}/#business`,
-    name: `${site.name} — ${site.role}`,
+    name: site.businessName,
     url: site.url,
     telephone: site.contact.phone,
     email: site.contact.email,

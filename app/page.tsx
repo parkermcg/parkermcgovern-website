@@ -12,7 +12,7 @@ import { LeadForm } from "@/components/sections/LeadForm";
 export const metadata = pageMetadata({
   title: `Mortgage Agent in Richmond Hill — ${site.name}`,
   description:
-    "Licensed Ontario mortgage agent in Richmond Hill. One application goes to a full panel of lenders, so you can compare your renewal, purchase or refinance options before you commit.",
+    "Licensed Ontario mortgage agent in Richmond Hill. One application goes to more than 40 lenders, so you can compare your renewal, purchase or refinance options before you commit.",
   path: "/",
 });
 
@@ -67,7 +67,7 @@ export default function HomePage() {
                 className="animate-rise mt-6 max-w-[52ch] text-lede text-ink-invert-muted"
                 style={{ animationDelay: "120ms" }}
               >
-                One application goes to a full panel of lenders — banks, credit
+                One application goes to more than 40 lenders — banks, credit
                 unions and monoline lenders — so you can see what you actually
                 qualify for before you commit to anything.
               </p>

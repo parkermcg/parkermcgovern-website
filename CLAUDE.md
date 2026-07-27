@@ -42,6 +42,7 @@ Do not restate any business fact from memory. It is either here or it gets verif
 | | |
 |---|---|
 | Name | Parker McGovern |
+| GBP listing name | **Parker McGovern Mortgage Agent** (exact — used for LocalBusiness schema) |
 | Title | Mortgage Agent, Level 2 |
 | Agent licence | **M21002541** |
 | Brokerage | Mortgagebroker.ca |
@@ -55,12 +56,13 @@ Do not restate any business fact from memory. It is either here or it gets verif
 | Booking | https://calendly.com/mortgageagent |
 | Application | https://velocity.newton.ca/sso/public.php?sc=2xreedfpzly7 |
 | Education | B.Comm, Real Estate & Housing — University of Guelph |
-| Reviews | 45 genuine Google reviews, 5.0★ |
+| Reviews | 45 genuine Google reviews, 5.0★ · [profile](https://share.google/v72Zg2uBHomJxQ8YE) |
+| Lender panel | **40+ lenders** (verified 2026-07-25, safe to publish) |
 | Service area | Richmond Hill / York Region / GTA |
 
 **Known conflict:** GBP shows postal code `L4B 1K4`; the Mortgagebroker.ca team page shows `L4B 1Y4` for the same street address. Site uses `L4B 1K4` per GBP. The other citation should be corrected at source.
 
-**Confirmed true, safe to state:** Parker tracks client renewal dates and rate environment on an ongoing basis. A specific lender count is publishable — **number still needed** before any figure appears.
+**Confirmed true, safe to state:** Parker tracks client renewal dates and rate environment on an ongoing basis. Lender panel is **40+**, confirmed 2026-07-25.
 
 ---
 

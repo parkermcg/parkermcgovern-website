@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description:
-    "Licensed Ontario mortgage agent based in Richmond Hill. One application, a full panel of lenders, and straight answers on renewals, first purchases and refinancing.",
+    "Licensed Ontario mortgage agent based in Richmond Hill. One application, 40+ lenders, and straight answers on renewals, first purchases and refinancing.",
   icons: { icon: "/favicon.svg" },
 };
 

@@ -11,6 +11,8 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Faq } from "@/components/sections/Faq";
+import { Reviews } from "@/components/sections/Reviews";
+import { reviewsForService } from "@/lib/content/reviews";
 
 export function generateStaticParams() {
   return servicePages.map((p) => ({ slug: p.slug }));
@@ -164,6 +166,15 @@ export default async function ServicePage({
           </div>
         </Container>
       </Section>
+
+      {/* Reviews relevant to this specific situation */}
+      <Reviews
+        items={reviewsForService(page.slug)}
+        eyebrow="From people in the same position"
+        heading="How this went for others."
+        surface="paper"
+        showProfileLink={false}
+      />
 
       {/* Calculators */}
       {linkedCalculators.length > 0 ? (

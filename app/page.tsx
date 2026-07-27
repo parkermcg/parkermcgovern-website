@@ -8,6 +8,8 @@ import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { LeadForm } from "@/components/sections/LeadForm";
+import { Reviews } from "@/components/sections/Reviews";
+import { featuredReviews } from "@/lib/content/reviews";
 
 export const metadata = pageMetadata({
   title: `Mortgage Agent in Richmond Hill — ${site.name}`,
@@ -121,6 +123,13 @@ export default function HomePage() {
           </dl>
         </Container>
       </Section>
+
+      {/* Reviews — sits directly after the hero block, before services */}
+      <Reviews
+        items={featuredReviews(3)}
+        heading="Forty-five people have been through this with me."
+        surface="paper"
+      />
 
       {/* Services */}
       <Section surface="paper">

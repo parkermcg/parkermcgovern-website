@@ -48,7 +48,7 @@ Do not restate any business fact from memory. It is either here or it gets verif
 | Brokerage | Mortgagebroker.ca |
 | Brokerage licence | **12707** |
 | Regulator | FSRA (Financial Services Regulatory Authority of Ontario) |
-| Address | 65B West Beaver Creek Rd, Richmond Hill, ON **L4B 1K4** |
+| Address | 65B West Beaver Creek Rd, Richmond Hill, ON **L4B 1Y4** |
 | Phone | 647-453-1222 |
 | Email | parker@mortgagebroker.ca |
 | Hours | Mon–Fri 7:30am–6:00pm · Sat–Sun 12:00pm–6:00pm |
@@ -60,7 +60,7 @@ Do not restate any business fact from memory. It is either here or it gets verif
 | Lender panel | **40+ lenders** (verified 2026-07-25, safe to publish) |
 | Service area | Richmond Hill / York Region / GTA |
 
-**Known conflict:** GBP shows postal code `L4B 1K4`; the Mortgagebroker.ca team page shows `L4B 1Y4` for the same street address. Site uses `L4B 1K4` per GBP. The other citation should be corrected at source.
+**Postal code — resolved 2026-07-27.** Was briefly inconsistent (`L4B 1K4` on GBP vs `L4B 1Y4` on the Mortgagebroker.ca team page). Parker corrected GBP to `L4B 1Y4`, so all citations now agree. Site follows `L4B 1Y4`.
 
 **Confirmed true, safe to state:** Parker tracks client renewal dates and rate environment on an ongoing basis. Lender panel is **40+**, confirmed 2026-07-25.
 

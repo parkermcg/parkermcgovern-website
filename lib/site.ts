@@ -40,7 +40,7 @@ export const site = {
     street: "65B West Beaver Creek Rd",
     locality: "Richmond Hill",
     region: "ON",
-    postalCode: "L4B 1K4",
+    postalCode: "L4B 1Y4",
     country: "CA",
   },
 

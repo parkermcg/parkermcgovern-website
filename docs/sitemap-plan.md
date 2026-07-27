@@ -183,7 +183,7 @@ Guides link *up* to money pages rather than sideways, so link equity concentrate
 
 | Type | Where |
 |---|---|
-| `Organization` + `LocalBusiness` | Sitewide. NAP: 65B West Beaver Creek Rd, Richmond Hill, ON L4B 1K4. `areaServed` lists GTA municipalities. |
+| `Organization` + `LocalBusiness` | Sitewide. NAP: 65B West Beaver Creek Rd, Richmond Hill, ON L4B 1Y4. `areaServed` lists GTA municipalities. |
 | `Person` | About page and every article author block — name, licence M21002541, credentials |
 | `FinancialService` | Money pages |
 | `FAQPage` | Only where FAQs are visibly rendered |
@@ -198,6 +198,6 @@ Guides link *up* to money pages rather than sideways, so link equity concentrate
 
 - GBP business name and phone, exactly as displayed
 - Verified lender count (confirmed publishable, number still needed)
-- Postal code conflict: GBP shows L4B 1K4, brokerage team page shows L4B 1Y4 — one needs correcting at the source
+- ~~Postal code conflict~~ — resolved 2026-07-27, all citations agree on L4B 1Y4
 - Aurora Chamber listing under *Mortgage Architects* — stale citation, should be removed or corrected
 - Analytics deferred by request; no search-performance feedback loop until GA4 and Search Console exist

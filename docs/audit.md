@@ -108,7 +108,7 @@ No GA4, no Search Console. The SEO work is running blind: there is no way to see
 - Google Business Profile business name and phone, exactly as displayed (needed for NAP consistency)
 - Google Business Profile URL — the About page states 5.0 from 45 reviews with nothing to link to
 - Verified lender count — confirmed publishable, figure not supplied
-- Postal code conflict: GBP shows `L4B 1K4`, the brokerage team page shows `L4B 1Y4`. One needs correcting at source.
+- ~~Postal code conflict~~ — resolved 2026-07-27. Parker corrected GBP to `L4B 1Y4`; all citations now agree and the site follows it.
 - Aurora Chamber listing under *Mortgage Architects* — stale citation
 
 ### 3.8 npm audit reports 3 high-severity advisories 🟡

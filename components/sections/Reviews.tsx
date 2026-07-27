@@ -75,7 +75,7 @@ export function Reviews({
           ) : null}
         </div>
 
-        <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid items-start gap-6 md:grid-cols-2 lg:grid-cols-3">
           {items.map((r) => (
             <li
               key={r.author + r.text.slice(0, 24)}
@@ -83,7 +83,11 @@ export function Reviews({
             >
               <Stars rating={r.rating} />
               <blockquote className={`mt-4 flex-1 ${quote}`}>
-                <p>{r.text}</p>
+                {r.text.split("\n\n").map((para, i) => (
+                  <p key={i} className={i > 0 ? "mt-3" : undefined}>
+                    {para}
+                  </p>
+                ))}
               </blockquote>
               <footer className={`mt-6 text-small ${meta}`}>
                 <span

@@ -52,8 +52,12 @@ export const site = {
   links: {
     book: "https://calendly.com/mortgageagent",
     apply: "https://velocity.newton.ca/sso/public.php?sc=2xreedfpzly7",
-    /** TODO: Google Business Profile URL still needed from Parker. */
-    gbp: "",
+    /**
+     * Google Business Profile share link, supplied by Parker 2026-07-25.
+     * Could not be verified programmatically — Google blocks automated
+     * fetches of Maps listings. Confirm it opens correctly in a browser.
+     */
+    gbp: "https://share.google/v72Zg2uBHomJxQ8YE",
   },
 
   /**

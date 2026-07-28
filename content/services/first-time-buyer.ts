@@ -53,18 +53,43 @@ const page: ServicePage = {
     {
       h: "The two accounts worth using before you buy",
       p: [
-        "Both of these are federal programs specifically for first purchases, and between them they change the arithmetic significantly. Neither is automatic — you have to open and use them.",
+        "Both are federal programs built specifically for a first purchase, and between them one buyer can direct $100,000 at a home — $40,000 contributed to a First Home Savings Account, plus $60,000 withdrawn from an RRSP under the Home Buyers' Plan. Whatever the FHSA earns along the way comes out on top of that. A couple who both qualify can do all of it twice.",
+        "They are not an either/or choice. You can make an FHSA withdrawal and an HBP withdrawal for the same home in the same purchase, as long as you meet each program's conditions at the time of each withdrawal. Neither is automatic — you have to open the account, fund it, and withdraw from it correctly.",
       ],
       list: [
         {
-          t: "First Home Savings Account (FHSA)",
-          d: "Contributions are tax-deductible like an RRSP, and qualifying withdrawals to buy a first home come out tax-free like a TFSA. It is the most efficient savings vehicle available for this specific purpose, and it has annual and lifetime contribution limits.",
+          t: "FHSA — what goes in",
+          d: "$8,000 of contribution room a year, to a lifetime maximum of $40,000. Contributions are deducted against your income the way RRSP contributions are, so a full $8,000 year reduces your taxable income by $8,000. Unused room carries forward, but the carryforward is itself capped at $8,000 — meaning the most you can ever put in during a single calendar year is $16,000.",
         },
         {
-          t: "Home Buyers' Plan (HBP)",
-          d: "Lets you withdraw from your RRSP toward a first home without immediate tax, provided you repay it into the RRSP over a set schedule. Worth combining with an FHSA rather than choosing between them.",
+          t: "FHSA — open it earlier than you think you need to",
+          d: "Room only starts accruing in the year you open your first account, and because you can never carry more than one extra year forward, reaching the $40,000 lifetime maximum takes at least five years of holding the account — no matter how much cash you have available. Opening one costs nothing and you do not have to fund it right away. The account existing is what starts the clock.",
+        },
+        {
+          t: "FHSA — what comes out",
+          d: "A qualifying withdrawal is entirely tax-free, including all the growth, and is never repaid. There is no minimum period the money must sit in the account first. You need a written agreement to buy or build, with the purchase completing before October 1 of the year following your withdrawal, and Form RC725 filed with your institution.",
+        },
+        {
+          t: "FHSA — the account has an expiry",
+          d: "It must be used within fifteen years of opening, by the end of the year you turn 71, or by the end of the year after your first qualifying withdrawal — whichever comes first. If you never buy, the balance transfers directly into an RRSP or RRIF with no tax and without consuming any of your RRSP deduction room. The money is not trapped.",
+        },
+        {
+          t: "Home Buyers' Plan — what you can take",
+          d: "Up to $60,000 per person out of your RRSPs, with no tax withheld at the time. The money has to already be in the account: RRSP contributions made in the 89 days before an HBP withdrawal may not be deductible. That rule catches people who try to route a down payment through an RRSP at the last minute to capture the refund.",
+        },
+        {
+          t: "Home Buyers' Plan — it is a loan from yourself",
+          d: "You repay it into your RRSP over fifteen years, a fifteenth of the balance each year. Repayment normally begins the second year after the year of your first withdrawal, and first withdrawals made between 2022 and 2025 received a temporary three-year deferral that pushes the start to the fifth year. In any year you repay less than the minimum, the shortfall is added to your taxable income for that year.",
+        },
+        {
+          t: "“First-time buyer” is not one single test",
+          d: "Broadly it means not having lived in a home you or your spouse or common-law partner owned during the current calendar year or the previous four. But the wording differs between opening an FHSA, withdrawing from one, and using the HBP — and the HBP carries its own exception for people who have separated. Worth confirming rather than assuming, especially where one partner has owned before.",
         },
       ],
+      aside: {
+        h: "The order matters more than the amounts",
+        p: "An FHSA opened today starts generating contribution room today, and that room is the one part you cannot buy back later. If you are a year or more from purchasing, open one before you do anything else — even with nothing in it. The RRSP side can be organised much closer to the purchase, provided the money has been sitting in the account longer than 89 days.",
+      },
     },
     {
       h: "Land transfer tax, and the rebate most people miss",
@@ -154,6 +179,22 @@ const page: ServicePage = {
       a: "Up to $4,000 against Ontario land transfer tax, and up to a further $4,475 against Toronto's municipal land transfer tax if the property is inside the city. It is claimed through your lawyer at closing and is not applied automatically.",
     },
     {
+      q: "How much can I put toward a home using an FHSA and the Home Buyers' Plan?",
+      a: "Up to $100,000 per person: $40,000 of lifetime FHSA contributions, plus a $60,000 withdrawal from your RRSPs under the Home Buyers' Plan. Any growth inside the FHSA comes out on top of the $40,000. A couple who both qualify can each do this, so $200,000 of contributions is possible in principle — though the FHSA side accrues at $8,000 a year, so the full amount takes at least five years to build.",
+    },
+    {
+      q: "Can I use both an FHSA and the Home Buyers' Plan for the same house?",
+      a: "Yes. They are separate programs and you can draw on both for the same purchase, provided you meet each one's conditions at the time of each withdrawal. There is no requirement to choose between them, and for most first-time buyers with the savings to do it, using both is the better answer.",
+    },
+    {
+      q: "Do I have to pay back an FHSA withdrawal like the Home Buyers' Plan?",
+      a: "No. A qualifying FHSA withdrawal is tax-free and permanent — there is nothing to repay. The Home Buyers' Plan is different: it is effectively a loan from your own RRSP, repaid over fifteen years at a fifteenth per year, and any year you repay less than the minimum, the shortfall is added to your taxable income. That difference is worth weighing if you are choosing which account to draw down first.",
+    },
+    {
+      q: "What happens to my FHSA if I never end up buying?",
+      a: "Nothing is lost. The balance transfers directly into an RRSP or RRIF with no tax owing and without using up any of your RRSP deduction room. The account itself has to be closed within fifteen years of opening or by the end of the year you turn 71, whichever comes first, so the deadline is on the account rather than on the money.",
+    },
+    {
       q: "Am I still a first-time buyer if my partner owned a home before?",
       a: "It depends on the specific program and how title is being taken, and the rules differ between the tax rebate and federal savings programs. This is worth confirming case by case rather than assuming — it is a question I get constantly and the answer is genuinely situational.",
     },
@@ -184,6 +225,14 @@ const page: ServicePage = {
     {
       name: "CMHC — Mortgage loan insurance",
       href: "https://www.cmhc-schl.gc.ca/consumers/home-buying/mortgage-loan-insurance-for-consumers",
+    },
+    {
+      name: "Canada Revenue Agency — First Home Savings Account (FHSA)",
+      href: "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/first-home-savings-account.html",
+    },
+    {
+      name: "Canada Revenue Agency — The Home Buyers' Plan",
+      href: "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/rrsps-related-plans/what-home-buyers-plan.html",
     },
   ],
 };

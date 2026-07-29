@@ -7,6 +7,7 @@ import refinance from "@/content/services/refinance";
 import selfEmployed from "@/content/services/self-employed";
 import investmentProperty from "@/content/services/investment-property";
 import newToCanada from "@/content/services/new-to-canada";
+import noPayment from "@/content/services/no-payment";
 
 /**
  * Registry of money pages. Order here is the order they appear sitewide.
@@ -22,6 +23,7 @@ export const servicePages: ServicePage[] = [
   selfEmployed,
   investmentProperty,
   newToCanada,
+  noPayment,
 ];
 
 export const serviceSlugs = servicePages.map((p) => p.slug);

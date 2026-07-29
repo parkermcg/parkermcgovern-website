@@ -28,6 +28,20 @@ export const servicePages: ServicePage[] = [
 
 export const serviceSlugs = servicePages.map((p) => p.slug);
 
+/**
+ * Money pages as header nav links.
+ *
+ * Derived rather than hand-listed so adding a service file still means no
+ * component changes — it appears in the "Types of mortgages" dropdown on its
+ * own. Imported by a server component and passed to the client Header as a
+ * prop, deliberately: importing this module directly into the client bundle
+ * would ship every page's full body copy to the browser.
+ */
+export const serviceNavItems = servicePages.map((p) => ({
+  href: `/mortgages/${p.slug}`,
+  label: p.eyebrow,
+}));
+
 export function getService(slug: string): ServicePage | undefined {
   return servicePages.find((p) => p.slug === slug);
 }

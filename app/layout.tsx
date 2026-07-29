@@ -4,6 +4,7 @@ import { site } from "@/lib/site";
 import { localBusinessSchema, personSchema } from "@/lib/seo/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Header } from "@/components/sections/Header";
+import { serviceNavItems } from "@/lib/content/services";
 import { Footer } from "@/components/sections/Footer";
 import "./globals.css";
 
@@ -57,7 +58,7 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <Header />
+        <Header services={serviceNavItems} />
         <main id="main">{children}</main>
         <Footer />
       </body>

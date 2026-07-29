@@ -97,10 +97,12 @@ export const calculators = [
   { slug: "stress-test", title: "Stress test", blurb: "The higher rate you must qualify at, even though you won't pay it." },
 ] as const;
 
+/**
+ * Secondary nav. The money pages are NOT listed here — they come from
+ * `serviceNavItems` in lib/content/services.ts and render as the
+ * "Types of mortgages" dropdown ahead of these items.
+ */
 export const nav = [
-  { href: "/mortgages/renewal", label: "Renewal" },
-  { href: "/mortgages/alternative-lending", label: "Alternative lending" },
-  { href: "/mortgages/first-time-buyer", label: "First-time buyers" },
   { href: "/calculators", label: "Calculators" },
   { href: "/guides", label: "Guides" },
   { href: "/about", label: "About" },

@@ -17,7 +17,12 @@ const field =
   "w-full rounded-[3px] border border-rule-invert bg-ground-raised px-3.5 py-3 text-ink-invert placeholder:text-ink-invert-muted/60 focus:border-brass-light focus:outline-none";
 const label = "mb-2 block text-small font-semibold text-ink-invert";
 
-export function LeadForm() {
+/**
+ * `askEmail` omits the email field for /inquire, which collects name, phone
+ * and message only. Kept as a variant of this component rather than a second
+ * form so the pipeline, honeypot and both outcome states stay in one place.
+ */
+export function LeadForm({ askEmail = true }: { askEmail?: boolean }) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
 
@@ -33,7 +38,7 @@ export function LeadForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: fd.get("name"),
-          email: fd.get("email"),
+          email: fd.get("email") ?? "", // absent when askEmail is false
           phone: fd.get("phone"),
           message: fd.get("message"),
           company: fd.get("company"), // honeypot
@@ -108,19 +113,21 @@ export function LeadForm() {
         </div>
       </div>
 
-      <div>
-        <label htmlFor="lead-email" className={label}>
-          Email
-        </label>
-        <input
-          id="lead-email"
-          name="email"
-          type="email"
-          required
-          autoComplete="email"
-          className={field}
-        />
-      </div>
+      {askEmail ? (
+        <div>
+          <label htmlFor="lead-email" className={label}>
+            Email
+          </label>
+          <input
+            id="lead-email"
+            name="email"
+            type="email"
+            required
+            autoComplete="email"
+            className={field}
+          />
+        </div>
+      ) : null}
 
       <div>
         <label htmlFor="lead-message" className={label}>

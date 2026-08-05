@@ -52,7 +52,14 @@ function validate(body: Record<string, unknown>):
   const message = str(body.message);
 
   if (!name || name.length > 100) return { ok: false, error: "Please enter your name." };
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) || email.length > 200)
+
+  /**
+   * Email is optional — /inquire deliberately asks only for name, phone and
+   * message. The homepage and /contact forms still mark it required in the
+   * markup, so this only relaxes the server for the form that omits it.
+   * When it IS supplied it must be valid, because it becomes the reply-to.
+   */
+  if (email && (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) || email.length > 200))
     return { ok: false, error: "Please enter a valid email address." };
   if (phone.replace(/\D/g, "").length < 10 || phone.length > 40)
     return { ok: false, error: "Please enter a phone number with at least 10 digits." };
@@ -70,7 +77,7 @@ async function sendEmail(d: Payload): Promise<boolean> {
 
   const body = [
     `Name:  ${d.name}`,
-    `Email: ${d.email}`,
+    `Email: ${d.email || "(not provided — reply by phone)"}`,
     `Phone: ${d.phone}`,
     "",
     d.message || "(no message)",
@@ -88,7 +95,8 @@ async function sendEmail(d: Payload): Promise<boolean> {
       body: JSON.stringify({
         from,
         to: [to],
-        reply_to: d.email,
+        // Only set when supplied — an empty reply_to is rejected by Resend.
+        ...(d.email ? { reply_to: d.email } : {}),
         subject: `New enquiry — ${d.name}`,
         text: body,
       }),

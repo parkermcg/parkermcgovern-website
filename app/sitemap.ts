@@ -16,7 +16,7 @@ const routes: {
   { path: "/", priority: 1.0, changeFrequency: "monthly" },
   { path: "/about", priority: 0.8, changeFrequency: "yearly" },
   { path: "/contact", priority: 0.8, changeFrequency: "yearly" },
-  { path: "/independent-enquiry", priority: 0.8, changeFrequency: "yearly" },
+  { path: "/inquire", priority: 0.8, changeFrequency: "yearly" },
   { path: "/apply", priority: 0.9, changeFrequency: "yearly" },
   { path: "/privacy", priority: 0.2, changeFrequency: "yearly" },
   ...servicePages.map((p) => ({

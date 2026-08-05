@@ -103,6 +103,7 @@ export const calculators = [
  * "Types of mortgages" dropdown ahead of these items.
  */
 export const nav = [
+  { href: "/independent-enquiry", label: "Independent enquiry" },
   { href: "/calculators", label: "Calculators" },
   { href: "/guides", label: "Guides" },
   { href: "/about", label: "About" },

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site, calculators, formattedAddress } from "@/lib/site";
 import { servicePages } from "@/lib/content/services";
 import { Container } from "@/components/ui/Container";
@@ -28,6 +29,22 @@ export function Footer() {
               {site.role} with {site.licence.brokerageName}, based in{" "}
               {site.address.locality} and serving the Greater Toronto Area.
             </p>
+
+            {/*
+              Brokerage mark. The all-white variant supplied by the brokerage
+              is used deliberately — the full-colour wordmark is dark navy and
+              would disappear against --ground. `unoptimized` skips the image
+              optimizer, which would otherwise require dangerouslyAllowSVG;
+              the file is 6.7KB of vector and needs no optimization.
+            */}
+            <Image
+              src="/mortgagebroker-ca-white.svg"
+              alt={site.licence.brokerageName}
+              width={953}
+              height={519}
+              unoptimized
+              className="mt-6 h-auto w-[150px]"
+            />
           </div>
 
           <div>

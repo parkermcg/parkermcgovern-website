@@ -70,7 +70,9 @@ Do not restate any business fact from memory. It is either here or it gets verif
 
 **Approved footer wording. Use verbatim, do not paraphrase:**
 
-> Regulatory notice: Parker McGovern is a licensed Mortgage Agent (Level 2), Lic. #M21002541, registered with Mortgagebroker.ca, Brokerage Lic. #12707, a mortgage brokerage regulated by the Financial Services Regulatory Authority of Ontario (FSRA). Rates, payments, and qualification figures shown throughout this site are estimates for illustrative purposes only, are not a commitment to lend, and are subject to change and lender approval.
+> Regulatory notice: Parker McGovern is a licensed Mortgage Agent (Level 2), Lic. #M21002541, registered with Mortgagebroker.ca, Brokerage Lic. #12707, independently owned and operated, a mortgage brokerage regulated by the Financial Services Regulatory Authority of Ontario (FSRA). Rates, payments, and qualification figures shown throughout this site are estimates for illustrative purposes only, are not a commitment to lend, and are subject to change and lender approval.
+
+**Amended 2026-08-11** at Parker's direction: "independently owned and operated" inserted after the brokerage licence number. Nothing else changed. The wording predating this amendment was the version marked approved, so the amended sentence has **not** itself been through Mortgagebroker.ca compliance — see §10.
 
 Brokerage name, brokerage licence, and agent licence appear in the footer sitewide **and** on every page discussing rates or products.
 
@@ -164,4 +166,5 @@ Server-side validation, honeypot, rate limiting. Designed success *and* failure 
 - Aurora Chamber listing under *Mortgage Architects* — stale citation, remove or correct
 - Resend account + DNS records
 - **Analytics deferred by request.** No GA4, no Search Console. Until these exist there is no feedback loop on which pages rank or convert, and the SEO work is running blind. Revisit before Phase 5.
+- **Amended regulatory notice needs a compliance nod.** "independently owned and operated" was added to the footer notice on 2026-08-11 at Parker's request (§4). The prior wording was the approved one; this edit has not been back through Mortgagebroker.ca compliance. Low risk — it is a standard brokerage disclosure and nothing else in the sentence moved — but it should be confirmed rather than assumed.
 - **`/privacy` has not been legally reviewed.** Drafted in Phase 2 to describe the site's actual data handling accurately, but it has not been through Mortgagebroker.ca compliance or a lawyer. Must be reviewed before the rebuild replaces production. If data handling changes — analytics added, CRM integrated, chat widget installed — the page must change with it.

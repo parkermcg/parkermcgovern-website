@@ -81,9 +81,14 @@ export const site = {
     "Pickering", "Ajax", "Whitby", "Oshawa", "Caledon", "Milton",
   ],
 
-  /** Approved verbatim. Do not paraphrase — CLAUDE.md §4. */
+  /**
+   * Approved verbatim. Do not paraphrase — CLAUDE.md §4.
+   *
+   * "independently owned and operated" added at Parker's direction
+   * 2026-08-11. Everything else is unchanged from the approved wording.
+   */
   regulatoryNotice:
-    "Regulatory notice: Parker McGovern is a licensed Mortgage Agent (Level 2), Lic. #M21002541, registered with Mortgagebroker.ca, Brokerage Lic. #12707, a mortgage brokerage regulated by the Financial Services Regulatory Authority of Ontario (FSRA). Rates, payments, and qualification figures shown throughout this site are estimates for illustrative purposes only, are not a commitment to lend, and are subject to change and lender approval.",
+    "Regulatory notice: Parker McGovern is a licensed Mortgage Agent (Level 2), Lic. #M21002541, registered with Mortgagebroker.ca, Brokerage Lic. #12707, independently owned and operated, a mortgage brokerage regulated by the Financial Services Regulatory Authority of Ontario (FSRA). Rates, payments, and qualification figures shown throughout this site are estimates for illustrative purposes only, are not a commitment to lend, and are subject to change and lender approval.",
 } as const;
 
 export const formattedAddress = `${site.address.street}, ${site.address.locality}, ${site.address.region} ${site.address.postalCode}`;

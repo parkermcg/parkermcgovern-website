@@ -62,6 +62,14 @@ export type Guide = {
   relatedGuides?: string[];
   relatedServices?: string[];
   relatedCalculators?: string[];
+
+  /**
+   * Awaiting Parker's sign-off. A draft still renders at its own URL so it
+   * can be reviewed on the live site, but ships `noindex`, is excluded from
+   * the sitemap, and does not appear in any index or related-links list.
+   * Remove the flag to publish — CLAUDE.md §4.
+   */
+  draft?: boolean;
 };
 
 import penalties from "@/content/guides/mortgage-penalties-ird";
@@ -72,6 +80,7 @@ import landTransferTax from "@/content/guides/ontario-land-transfer-tax-explaine
 import stressTest from "@/content/guides/stress-test-explained";
 import creditScore from "@/content/guides/does-rate-shopping-hurt-credit";
 import declined from "@/content/guides/what-to-do-when-declined";
+import fhsa from "@/content/guides/fhsa-explained";
 
 /**
  * Registry. Adding a guide: create content/guides/<slug>.ts, add one import
@@ -86,11 +95,16 @@ export const guides: Guide[] = [
   stressTest,
   creditScore,
   declined,
+  fhsa,
 ];
 
+/** Every guide including drafts. Use only for routing and lookups. */
 export const guideSlugs = guides.map((g) => g.slug);
 export const getGuide = (slug: string) => guides.find((g) => g.slug === slug);
 
+/** Signed-off guides only. This is what indexes, listings and the sitemap use. */
+export const publishedGuides = guides.filter((g) => !g.draft);
+
 export function guidesByCluster(cluster: GuideCluster) {
-  return guides.filter((g) => g.cluster === cluster);
+  return publishedGuides.filter((g) => g.cluster === cluster);
 }

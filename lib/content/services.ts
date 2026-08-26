@@ -28,6 +28,9 @@ export const servicePages: ServicePage[] = [
 
 export const serviceSlugs = servicePages.map((p) => p.slug);
 
+/** Signed-off money pages only — what the nav, homepage, footer and sitemap use. */
+export const publishedServicePages = servicePages.filter((p) => !p.draft);
+
 /**
  * Money pages as header nav links.
  *
@@ -37,7 +40,7 @@ export const serviceSlugs = servicePages.map((p) => p.slug);
  * prop, deliberately: importing this module directly into the client bundle
  * would ship every page's full body copy to the browser.
  */
-export const serviceNavItems = servicePages.map((p) => ({
+export const serviceNavItems = publishedServicePages.map((p) => ({
   href: `/mortgages/${p.slug}`,
   label: p.eyebrow,
 }));

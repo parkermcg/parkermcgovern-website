@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
-import { guides, guidesByCluster, CLUSTERS, type GuideCluster } from "@/lib/content/guides";
+import { publishedGuides, guidesByCluster, CLUSTERS, type GuideCluster } from "@/lib/content/guides";
 import { pageMetadata } from "@/lib/seo/metadata";
 import { breadcrumbSchema } from "@/lib/seo/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -39,7 +39,7 @@ export default function GuidesIndex() {
       <PageHero
         eyebrow="Guides"
         title="The explanations you should have been given the first time."
-        lede={`${guides.length} guides on how mortgages actually work in Ontario. Written by me, sourced to CMHC, OSFI, the Ministry of Finance and the FCAC, and updated when the rules change.`}
+        lede={`${publishedGuides.length} guides on how mortgages actually work in Ontario. Written by me, sourced to CMHC, OSFI, the Ministry of Finance and the FCAC, and updated when the rules change.`}
       >
         <Button href={site.links.book} external>
           Book a call

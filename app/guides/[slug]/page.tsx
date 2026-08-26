@@ -32,6 +32,7 @@ export async function generateMetadata({
     title: g.metaTitle,
     description: g.metaDescription,
     path: `/guides/${g.slug}`,
+    noindex: g.draft === true,
   });
 }
 
@@ -52,13 +53,13 @@ export default async function GuidePage({
 
   const services = (g.relatedServices ?? [])
     .map((s) => servicePages.find((p) => p.slug === s))
-    .filter((p): p is NonNullable<typeof p> => Boolean(p));
+    .filter((p): p is NonNullable<typeof p> => Boolean(p && !p.draft));
   const calcs = (g.relatedCalculators ?? [])
     .map((s) => allCalculators.find((c) => c.slug === s))
     .filter((c): c is (typeof allCalculators)[number] => Boolean(c));
   const siblings = (g.relatedGuides ?? [])
     .map((s) => getGuide(s))
-    .filter((x): x is NonNullable<typeof x> => Boolean(x));
+    .filter((x): x is NonNullable<typeof x> => Boolean(x && !x.draft));
 
   return (
     <>

@@ -65,7 +65,7 @@ export default async function CalculatorPage({
   ];
   const related = page.related
     .map((s) => servicePages.find((p) => p.slug === s))
-    .filter((p): p is NonNullable<typeof p> => Boolean(p));
+    .filter((p): p is NonNullable<typeof p> => Boolean(p && !p.draft));
 
   return (
     <>

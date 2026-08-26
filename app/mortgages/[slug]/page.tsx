@@ -32,6 +32,7 @@ export async function generateMetadata({
     title: page.metaTitle,
     description: page.metaDescription,
     path: `/mortgages/${page.slug}`,
+    noindex: page.draft === true,
   });
 }
 
@@ -55,7 +56,7 @@ export default async function ServicePage({
 
   const linkedServices = page.related
     .map((s) => servicePages.find((p) => p.slug === s))
-    .filter((p): p is NonNullable<typeof p> => Boolean(p));
+    .filter((p): p is NonNullable<typeof p> => Boolean(p && !p.draft));
 
   return (
     <>

@@ -60,4 +60,11 @@ export type ServicePage = {
    */
   verified?: string;
   sources?: { name: string; href: string }[];
+
+  /**
+   * Awaiting Parker's sign-off. Renders at its own URL for review but ships
+   * `noindex`, is excluded from the sitemap, and does not appear in the
+   * header dropdown, homepage grid or footer. Remove to publish.
+   */
+  draft?: boolean;
 };

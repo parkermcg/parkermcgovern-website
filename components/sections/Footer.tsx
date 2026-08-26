@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { site, calculators, formattedAddress } from "@/lib/site";
-import { servicePages } from "@/lib/content/services";
+import { publishedServicePages } from "@/lib/content/services";
 import { Container } from "@/components/ui/Container";
 
 /**
@@ -52,7 +52,7 @@ export function Footer() {
               How I help
             </h2>
             <ul className="space-y-2.5 text-small">
-              {servicePages.map((s) => (
+              {publishedServicePages.map((s) => (
                 <li key={s.slug}>
                   <Link
                     href={`/mortgages/${s.slug}`}

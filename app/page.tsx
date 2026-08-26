@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site, calculators } from "@/lib/site";
-import { servicePages } from "@/lib/content/services";
+import { publishedServicePages } from "@/lib/content/services";
 import { pageMetadata } from "@/lib/seo/metadata";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
@@ -141,7 +141,7 @@ export default function HomePage() {
             </h2>
           </div>
           <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {servicePages.map((s) => (
+            {publishedServicePages.map((s) => (
               <li key={s.slug}>
                 <Link
                   href={`/mortgages/${s.slug}`}

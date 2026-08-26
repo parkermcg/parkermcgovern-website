@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
-import { servicePages } from "@/lib/content/services";
+import { publishedServicePages } from "@/lib/content/services";
 import { calculatorPages } from "@/lib/content/calculators";
-import { guides } from "@/lib/content/guides";
+import { publishedGuides } from "@/lib/content/guides";
 
 /**
  * Only live routes belong here. Entries are added as each phase ships —
@@ -19,7 +19,7 @@ const routes: {
   { path: "/inquire", priority: 0.8, changeFrequency: "yearly" },
   { path: "/apply", priority: 0.9, changeFrequency: "yearly" },
   { path: "/privacy", priority: 0.2, changeFrequency: "yearly" },
-  ...servicePages.map((p) => ({
+  ...publishedServicePages.map((p) => ({
     path: `/mortgages/${p.slug}`,
     priority: 0.9,
     changeFrequency: "monthly" as const,
@@ -31,7 +31,7 @@ const routes: {
     changeFrequency: "monthly" as const,
   })),
   { path: "/guides", priority: 0.7, changeFrequency: "monthly" as const },
-  ...guides.map((g) => ({
+  ...publishedGuides.map((g) => ({
     path: `/guides/${g.slug}`,
     priority: 0.7,
     changeFrequency: "yearly" as const,

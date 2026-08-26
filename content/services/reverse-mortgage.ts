@@ -29,12 +29,13 @@ import type { ServicePage } from "@/lib/content/types";
  *    they are different products for different people, and the
  *    cannibalization test (CLAUDE.md §5) is what keeps them apart.
  *
- * 6. The slug stays /mortgages/no-payment despite the reverse mortgage
- *    focus, because a live Google Ads campaign points at it. Changing it
- *    means updating the Ads final URL in the same sitting.
+ * 6. Slug moved from /mortgages/no-payment to /mortgages/reverse-mortgage
+ *    on 2026-08-26, once Parker confirmed the Google Ads campaign had not
+ *    launched. The old path 301s to this one in next.config.mjs — keep that
+ *    redirect, the old URL was live and in the sitemap for a fortnight.
  */
 const page: ServicePage = {
-  slug: "no-payment",
+  slug: "reverse-mortgage",
   eyebrow: "Reverse mortgages",
   title: "Reverse mortgages: no payments is not the same as no cost.",
   lede:

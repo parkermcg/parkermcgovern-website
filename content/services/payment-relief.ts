@@ -2,7 +2,7 @@ import type { ServicePage } from "@/lib/content/types";
 
 /**
  * Payment relief — temporary measures for someone struggling with a mortgage
- * they already have. Distinct from /mortgages/no-payment, which is Canadian
+ * they already have. Distinct from /mortgages/reverse-mortgage, which is Canadian
  * reverse mortgages: a permanent arrangement for homeowners 55+. Keep the two
  * separate (CLAUDE.md §5 cannibalization test).
  *

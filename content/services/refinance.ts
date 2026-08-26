@@ -140,7 +140,7 @@ const page: ServicePage = {
   ],
 
   calculators: ["mortgage-payment", "affordability", "stress-test"],
-  related: ["payment-relief", "alternative-lending", "no-payment"],
+  related: ["payment-relief", "alternative-lending", "reverse-mortgage"],
 
   verified: "July 2026",
   sources: [

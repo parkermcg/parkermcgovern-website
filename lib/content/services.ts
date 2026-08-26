@@ -7,7 +7,7 @@ import refinance from "@/content/services/refinance";
 import selfEmployed from "@/content/services/self-employed";
 import investmentProperty from "@/content/services/investment-property";
 import newToCanada from "@/content/services/new-to-canada";
-import noPayment from "@/content/services/no-payment";
+import reverseMortgage from "@/content/services/reverse-mortgage";
 import badCredit from "@/content/services/bad-credit";
 import paymentRelief from "@/content/services/payment-relief";
 
@@ -25,7 +25,7 @@ export const servicePages: ServicePage[] = [
   selfEmployed,
   investmentProperty,
   newToCanada,
-  noPayment,
+  reverseMortgage,
   badCredit,
   paymentRelief,
 ];

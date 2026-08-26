@@ -130,7 +130,7 @@ const guide: Guide = {
   ],
 
   relatedGuides: ["mortgage-penalties-ird", "stress-test-explained"],
-  relatedServices: ["renewal", "first-time-buyer", "no-payment"],
+  relatedServices: ["renewal", "first-time-buyer", "reverse-mortgage"],
   relatedCalculators: ["mortgage-payment", "stress-test"],
 };
 

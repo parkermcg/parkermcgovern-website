@@ -9,6 +9,7 @@ import investmentProperty from "@/content/services/investment-property";
 import newToCanada from "@/content/services/new-to-canada";
 import noPayment from "@/content/services/no-payment";
 import badCredit from "@/content/services/bad-credit";
+import paymentRelief from "@/content/services/payment-relief";
 
 /**
  * Registry of money pages. Order here is the order they appear sitewide.
@@ -26,6 +27,7 @@ export const servicePages: ServicePage[] = [
   newToCanada,
   noPayment,
   badCredit,
+  paymentRelief,
 ];
 
 export const serviceSlugs = servicePages.map((p) => p.slug);

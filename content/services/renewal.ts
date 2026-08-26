@@ -152,7 +152,7 @@ const page: ServicePage = {
   ],
 
   calculators: ["mortgage-payment", "stress-test", "affordability"],
-  related: ["refinance", "no-payment", "alternative-lending"],
+  related: ["refinance", "payment-relief", "no-payment"],
 
   verified: "July 2026",
   sources: [

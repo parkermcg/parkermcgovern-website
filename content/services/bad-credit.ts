@@ -165,7 +165,7 @@ const page: ServicePage = {
   ],
 
   calculators: ["affordability", "mortgage-payment", "stress-test"],
-  related: ["alternative-lending", "refinance", "self-employed"],
+  related: ["payment-relief", "alternative-lending", "refinance"],
 
   verified: "August 2026",
   sources: [

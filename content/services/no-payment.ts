@@ -21,6 +21,17 @@ import type { ServicePage } from "@/lib/content/types";
  * 4. Every figure below is from FCAC and is cited on the page. Reverse
  *    mortgage terms are lender-specific — the page says so repeatedly rather
  *    than implying one universal product.
+ *
+ * 5. SCOPE, set 2026-08-26. This page is Canadian reverse mortgages only.
+ *    Temporary payment relief — deferrals, extended amortization,
+ *    interest-only, accruing-interest private mortgages — lives on
+ *    /mortgages/payment-relief. Do not let the two merge back together:
+ *    they are different products for different people, and the
+ *    cannibalization test (CLAUDE.md §5) is what keeps them apart.
+ *
+ * 6. The slug stays /mortgages/no-payment despite the reverse mortgage
+ *    focus, because a live Google Ads campaign points at it. Changing it
+ *    means updating the Ads final URL in the same sitting.
  */
 const page: ServicePage = {
   slug: "no-payment",
@@ -43,27 +54,14 @@ const page: ServicePage = {
 
   blocks: [
     {
-      h: "Three different things people mean by this",
+      h: "What a Canadian reverse mortgage is, and is not",
       p: [
-        "\"No payment\" gets used loosely, and the three structures behind it are not remotely equivalent. Knowing which one is actually in front of you is the first job.",
-      ],
-      list: [
-        {
-          t: "A reverse mortgage",
-          d: "For homeowners usually aged 55 or older. You borrow against your home equity, make no regular payments at all, and the balance is repaid when you sell, move out, or die. This is the product most people mean, and most of this page is about it.",
-        },
-        {
-          t: "Interest-only",
-          d: "Not a no-payment product, despite often being described as one. You pay the interest each month and none of the principal, so your balance stays flat rather than falling. Common on home equity lines of credit and on some alternative lending.",
-        },
-        {
-          t: "Accruing or prepaid interest on a private mortgage",
-          d: "Some private mortgages genuinely require no monthly payment — the interest is either deducted from the advance up front or added to the balance and settled when the mortgage matures. Short-term, expensive, and covered properly on the alternative lending page.",
-        },
+        "Most of what is written about reverse mortgages online is American, and the American product is not the same. In Canada these are offered by federally regulated lenders and by mortgage brokers, the borrowing limit is calculated differently, and the government-insured HECM structure that dominates US coverage does not exist here. Read Canadian sources for a Canadian decision.",
+        "It is also worth separating this from the other thing people mean when they say \"no payment\". A reverse mortgage is a permanent arrangement for homeowners 55 and older, with no repayment until you leave the home. Payment relief — deferrals, extended amortization, interest-only periods — is a temporary measure for someone struggling with an existing mortgage, and it is covered on its own page.",
       ],
       aside: {
-        h: "The distinction that matters",
-        p: "With interest-only, your balance stays where it is. With a reverse mortgage or an accruing private mortgage, your balance grows every month you hold it. Over a long enough period that is the difference between borrowing against your equity and steadily consuming it.",
+        h: "Two different problems",
+        p: "If you are 55 or older with substantial equity and want to convert some of it into money you do not have to repay while you live there, this page is the right one. If you are struggling to make the payments on a mortgage you already have, the payment relief page is where to start — the options there are cheaper, temporary, and in some cases your bank is expected to offer them.",
       },
     },
     {
@@ -136,7 +134,7 @@ const page: ServicePage = {
   ],
 
   honest: {
-    h: "When a no-payment mortgage is the wrong answer",
+    h: "When a reverse mortgage is the wrong answer",
     p: [
       "If you have the income to service a conventional mortgage or a line of credit, you will almost certainly pay less by doing that instead. The whole premium here buys the removal of a monthly payment. If that payment is affordable, you are paying a great deal for something you did not need.",
       "If the amount you need is small and the need is short-term, this is an expensive way to solve it. Setting up a reverse mortgage carries fixed costs that do not shrink with the size of the loan, and the interest keeps compounding long after the reason for borrowing has passed.",
@@ -173,7 +171,7 @@ const page: ServicePage = {
   ],
 
   calculators: ["mortgage-payment"],
-  related: ["alternative-lending", "refinance", "renewal"],
+  related: ["payment-relief", "refinance", "renewal"],
 
   verified: "July 2026",
   sources: [

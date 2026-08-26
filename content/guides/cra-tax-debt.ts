@@ -1,8 +1,8 @@
 import type { Guide } from "@/lib/content/guides";
 
 /**
- * DRAFT — awaiting Parker's sign-off. Ships `noindex` and stays out of the
- * sitemap and all listings until `draft` is removed.
+ * PUBLISHED 2026-08-26 — Parker reviewed and approved all three Phase 3
+ * pages and asked for them to go live.
  *
  * VERIFIED against CRA directly, 2026-08-26:
  *   - Before placing a lien or seizing, the CRA must legally certify the
@@ -22,7 +22,6 @@ import type { Guide } from "@/lib/content/guides";
 const guide: Guide = {
   slug: "cra-tax-debt",
   cluster: "deciding",
-  draft: true,
 
   title: "Clearing CRA tax debt with your mortgage",
   lede:

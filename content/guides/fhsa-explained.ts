@@ -1,8 +1,8 @@
 import type { Guide } from "@/lib/content/guides";
 
 /**
- * DRAFT — awaiting Parker's sign-off. Ships `noindex` and stays out of the
- * sitemap and all listings until `draft` is removed (CLAUDE.md §4).
+ * PUBLISHED 2026-08-26 — Parker reviewed and approved all three Phase 3
+ * pages and asked for them to go live.
  *
  * Every figure verified against primary sources on 2026-08-26:
  *   - FHSA limits, carryforward cap, participation period, qualifying
@@ -20,7 +20,6 @@ import type { Guide } from "@/lib/content/guides";
 const guide: Guide = {
   slug: "fhsa-explained",
   cluster: "first-time-buyer",
-  draft: true,
 
   title: "The First Home Savings Account, explained",
   lede:

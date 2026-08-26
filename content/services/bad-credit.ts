@@ -1,8 +1,8 @@
 import type { ServicePage } from "@/lib/content/types";
 
 /**
- * DRAFT — awaiting Parker's sign-off. Ships `noindex`, excluded from the
- * sitemap, header dropdown, homepage grid and footer until `draft` is removed.
+ * PUBLISHED 2026-08-26 — Parker reviewed and approved all three Phase 3
+ * pages and asked for them to go live.
  *
  * VERIFIED (Office of the Superintendent of Bankruptcy, 2026-08-26):
  *   consumer proposals are administered by a Licensed Insolvency Trustee and
@@ -10,21 +10,21 @@ import type { ServicePage } from "@/lib/content/types";
  *   cannot run longer than five years; unlike bankruptcy the debtor keeps
  *   their assets provided the terms are met.
  *
- * NEEDS PARKER'S CONFIRMATION BEFORE PUBLISHING — deliberately written
- * without hard numbers where I could not source them:
+ * DELIBERATELY WITHOUT HARD NUMBERS in two places. Parker approved
+ * publication on 2026-08-26 without supplying them, so the page ships
+ * describing the mechanism rather than stating figures:
  *   1. Credit bureau retention. Equifax and TransUnion remove a completed
- *      consumer proposal on different schedules. I did not have a primary
- *      source, so the page describes the mechanism without stating years.
- *      Add the figures only if Parker can source them.
+ *      consumer proposal on different schedules and I had no primary source.
+ *      The page tells the reader to ask the bureaus for their own file.
  *   2. Lender re-qualification timelines. "Discharged plus re-established
- *      credit" is described as common practice, not as a rule, because it
- *      varies by lender and is not a published standard. Parker should
- *      confirm this matches what he actually sees.
- *   3. No rates, fees or approval odds anywhere — none supplied (CLAUDE.md §4).
+ *      credit" is framed as common practice, not as a rule, because it
+ *      varies by lender and is not a published standard.
+ * Both are safe as written. If Parker later supplies sourced figures they
+ * can be added — but do not invent them (CLAUDE.md §4).
+ *   3. No rates, fees or approval odds anywhere — none supplied.
  */
 const page: ServicePage = {
   slug: "bad-credit",
-  draft: true,
 
   eyebrow: "Credit-damaged files",
   title: "A bruised credit file is a timing problem, not a character problem.",

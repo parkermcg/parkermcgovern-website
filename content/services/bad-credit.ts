@@ -36,7 +36,7 @@ const page: ServicePage = {
 
   metaTitle: "Bad Credit Mortgages in Ontario",
   metaDescription:
-    "How mortgages work in Ontario after missed payments, a consumer proposal or a bankruptcy — which lenders will look, what it costs, and how long until you requalify.",
+    "Mortgages in Ontario after missed payments, a consumer proposal or a bankruptcy — which lenders will look, what it costs, and how long until you requalify.",
 
   intro: [
     "Most people arrive at this subject having already been told no, usually by a bank, usually without much explanation. The explanation matters, because the reason for a decline determines how long the problem lasts and what fixes it.",

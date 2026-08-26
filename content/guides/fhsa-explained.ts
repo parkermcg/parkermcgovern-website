@@ -27,7 +27,7 @@ const guide: Guide = {
 
   metaTitle: "The FHSA for First-Time Buyers",
   metaDescription:
-    "How the First Home Savings Account works in Ontario: the $8,000 and $40,000 limits, what a qualifying withdrawal needs, and stacking it with the Home Buyers' Plan.",
+    "How the First Home Savings Account works: the $8,000 and $40,000 limits, what a qualifying withdrawal needs, and stacking it with the Home Buyers' Plan.",
 
   published: "2026-08-26",
   updated: "2026-08-26",

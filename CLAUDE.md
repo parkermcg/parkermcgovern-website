@@ -58,6 +58,7 @@ Do not restate any business fact from memory. It is either here or it gets verif
 | Education | B.Comm, Real Estate & Housing — University of Guelph |
 | Reviews | 45 genuine Google reviews, 5.0★ · [profile](https://share.google/v72Zg2uBHomJxQ8YE) |
 | Lender panel | **40+ lenders** (verified 2026-07-25, safe to publish) |
+| Reverse mortgages | Holds lender relationships for reverse mortgages, incl. **HomeEquity Bank** and **Equitable Bank** — confirmed by Parker 2026-08-26. Safe to state he arranges them. |
 | Service area | Richmond Hill / York Region / GTA |
 
 **Postal code — resolved 2026-07-27.** Was briefly inconsistent (`L4B 1K4` on GBP vs `L4B 1Y4` on the Mortgagebroker.ca team page). Parker corrected GBP to `L4B 1Y4`, so all citations now agree. Site follows `L4B 1Y4`.
@@ -72,7 +73,9 @@ Do not restate any business fact from memory. It is either here or it gets verif
 
 > Regulatory notice: Parker McGovern is a licensed Mortgage Agent (Level 2), Lic. #M21002541, registered with Mortgagebroker.ca, Brokerage Lic. #12707, independently owned and operated, a mortgage brokerage regulated by the Financial Services Regulatory Authority of Ontario (FSRA). Rates, payments, and qualification figures shown throughout this site are estimates for illustrative purposes only, are not a commitment to lend, and are subject to change and lender approval.
 
-**Amended 2026-08-11** at Parker's direction: "independently owned and operated" inserted after the brokerage licence number. Nothing else changed. The wording predating this amendment was the version marked approved, so the amended sentence has **not** itself been through Mortgagebroker.ca compliance — see §10.
+**Amended 2026-08-11** at Parker's direction: "independently owned and operated" inserted after the brokerage licence number. Nothing else changed.
+
+**Settled 2026-08-26.** Parker directed that the site's regulatory notices stay exactly as they now read. This wording is the standing approved version — do not revert it to any earlier form, and do not re-raise it as an open question.
 
 Brokerage name, brokerage licence, and agent licence appear in the footer sitewide **and** on every page discussing rates or products.
 
@@ -166,5 +169,7 @@ Server-side validation, honeypot, rate limiting. Designed success *and* failure 
 - Aurora Chamber listing under *Mortgage Architects* — stale citation, remove or correct
 - Resend account + DNS records
 - **Analytics deferred by request.** No GA4, no Search Console. Until these exist there is no feedback loop on which pages rank or convert, and the SEO work is running blind. Revisit before Phase 5.
-- **Amended regulatory notice needs a compliance nod.** "independently owned and operated" was added to the footer notice on 2026-08-11 at Parker's request (§4). The prior wording was the approved one; this edit has not been back through Mortgagebroker.ca compliance. Low risk — it is a standard brokerage disclosure and nothing else in the sentence moved — but it should be confirmed rather than assumed.
+- ~~Amended regulatory notice~~ — Parker directed on 2026-08-26 that the site's regulatory notices stay exactly as they are. Treat the current wording as settled; do not revert it.
+- ~~`/privacy` legal review~~ — Parker confirmed 2026-08-26 that compliance has reviewed it. **Note:** Vercel Web Analytics was added the same day and the Cookies and analytics section was rewritten to describe it, so that specific wording postdates the review.
+- **Superseded — kept for history.** **Amended regulatory notice needed a compliance nod.** "independently owned and operated" was added to the footer notice on 2026-08-11 at Parker's request (§4). The prior wording was the approved one; this edit has not been back through Mortgagebroker.ca compliance. Low risk — it is a standard brokerage disclosure and nothing else in the sentence moved — but it should be confirmed rather than assumed.
 - **`/privacy` has not been legally reviewed.** Drafted in Phase 2 to describe the site's actual data handling accurately, but it has not been through Mortgagebroker.ca compliance or a lawyer. Must be reviewed before the rebuild replaces production. If data handling changes — analytics added, CRM integrated, chat widget installed — the page must change with it.

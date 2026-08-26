@@ -6,11 +6,11 @@ import type { ServicePage } from "@/lib/content/types";
  * 1. No rates or payment examples appear here. None have been supplied, and
  *    reverse mortgage pricing varies by lender, age and property (§4).
  *
- * 2. This page does NOT claim Parker arranges reverse mortgages. Whether he
- *    holds a HomeEquity Bank or Equitable Bank relationship is not a verified
- *    fact in CLAUDE.md §3, so the page educates and offers a comparison
- *    rather than advertising a product. If that relationship exists and is
- *    confirmed, the CTA framing can be strengthened — until then it stays.
+ * 2. Parker confirmed on 2026-08-26 that he holds reverse mortgage lender
+ *    relationships including HomeEquity Bank and Equitable Bank (now recorded
+ *    in CLAUDE.md §3), so the page may state that he arranges them. The
+ *    framing stays educational regardless — this product is FSRA-supervised
+ *    and the honest case against it is the reason the page ranks.
  *
  * 3. FSRA has issued supervisory direction requiring mortgage brokerages to
  *    enhance policies and procedures specifically for reverse mortgage
@@ -130,7 +130,7 @@ const page: ServicePage = {
       p: [
         "FCAC's own guidance is to compare alternatives before taking a reverse mortgage, and that is the right instinct. The realistic options are usually a conventional mortgage or a home equity line of credit if income supports the payments, downsizing to a smaller property, or in some situations a straightforward family arrangement.",
         "Each of those has a real cost too, including the emotional cost of leaving a home you want to stay in. The point is not that a reverse mortgage is the wrong answer — for some people it is clearly the right one. The point is that it should be chosen against the alternatives rather than instead of looking at them.",
-        "That comparison is something I am happy to sit down and work through with you, in dollars, whether or not there is a transaction in it for me. If a HELOC at a lower rate would do the job, you should hear that.",
+        "I arrange reverse mortgages, including through HomeEquity Bank and Equitable Bank, so this is a product I can actually place rather than only describe. That cuts both ways, and you should know it: I am happy to work the comparison through with you in dollars whether or not there is a transaction in it for me. If a HELOC at a lower rate would do the job, you should hear that from me first.",
       ],
     },
   ],

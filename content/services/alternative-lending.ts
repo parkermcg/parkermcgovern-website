@@ -151,7 +151,7 @@ const page: ServicePage = {
   ],
 
   calculators: ["mortgage-payment", "affordability", "stress-test"],
-  related: ["self-employed", "refinance", "investment-property"],
+  related: ["self-employed", "refinance", "no-payment"],
 };
 
 export default page;

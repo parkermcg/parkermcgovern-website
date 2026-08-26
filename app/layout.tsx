@@ -6,6 +6,13 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { Header } from "@/components/sections/Header";
 import { serviceNavItems } from "@/lib/content/services";
 import { Footer } from "@/components/sections/Footer";
+/**
+ * Vercel Web Analytics. Chosen over GA4 deliberately: it sets no cookies and
+ * collects no personal data, so it needs no consent banner on a lead-gen site,
+ * and it is a fraction of GA4's payload against the Lighthouse budget (§8).
+ * Enabled in the Vercel dashboard by Parker 2026-08-26. /privacy describes it.
+ */
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -61,6 +68,7 @@ export default function RootLayout({
         <Header services={serviceNavItems} />
         <main id="main">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

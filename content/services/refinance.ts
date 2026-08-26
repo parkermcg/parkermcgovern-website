@@ -140,7 +140,7 @@ const page: ServicePage = {
   ],
 
   calculators: ["mortgage-payment", "affordability", "stress-test"],
-  related: ["alternative-lending", "self-employed", "investment-property"],
+  related: ["alternative-lending", "no-payment", "investment-property"],
 
   verified: "July 2026",
   sources: [

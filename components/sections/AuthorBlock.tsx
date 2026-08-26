@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { site } from "@/lib/site";
 
 /**
@@ -26,7 +27,11 @@ export function AuthorBlock({ updated }: { updated: string }) {
       </div>
       <div className="min-w-0">
         <p className="text-small font-semibold text-ink-invert">
-          Written by {site.name}, {site.role}
+          Written by{" "}
+          <Link href="/about" className="underline underline-offset-2 hover:text-brass-light">
+            {site.name}
+          </Link>
+          , {site.role}
         </p>
         <p className="text-small text-ink-invert-muted">
           FSRA Licence #{site.licence.agent} · {site.licence.brokerageName}{" "}

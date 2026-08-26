@@ -16,6 +16,7 @@ function Stars({ rating }: { rating: number }) {
   return (
     <p
       className="text-brass"
+      role="img"
       aria-label={`${rating} out of 5 stars`}
       title={`${rating} out of 5`}
     >

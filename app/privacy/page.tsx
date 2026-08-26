@@ -48,9 +48,10 @@ const sections = [
     ],
   },
   {
-    h: "Cookies and tracking",
+    h: "Cookies and analytics",
     p: [
-      "This site does not set advertising or tracking cookies, and does not run third-party analytics or advertising scripts.",
+      "This site does not set advertising or tracking cookies, does not run advertising scripts, and does not sell or share information about your visit with advertisers.",
+      "It does use Vercel Web Analytics to count page views and see which pages people find useful. This was chosen specifically because it sets no cookies and does not build a profile of you: it records the page visited, the referring site, and coarse details like country and device type, without storing an identifier that follows you between visits or across other websites. There is nothing in it that identifies you personally.",
       "The site is hosted on Vercel, which processes standard server request information — such as IP address and browser type — for security and to keep the site running.",
     ],
   },

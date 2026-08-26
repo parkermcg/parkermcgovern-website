@@ -122,7 +122,7 @@ const guide: Guide = {
   ],
 
   relatedGuides: ["fixed-vs-variable"],
-  relatedServices: ["renewal", "refinance"],
+  relatedServices: ["renewal", "refinance", "no-payment"],
   relatedCalculators: ["mortgage-payment"],
 };
 

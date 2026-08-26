@@ -18,7 +18,17 @@ export const site = {
 
   /** Verified by Parker 2026-07-25. Safe to publish — CLAUDE.md §3. */
   lenderCount: "40+",
-  url: "https://parkermcgovern.ca",
+  /**
+   * Canonical host. MUST match whichever domain Vercel serves as primary —
+   * the other one 301s to it. Set to www on 2026-08-26 at Parker's direction,
+   * after adding www in Vercel made it primary and left the apex redirecting
+   * to a host every canonical and sitemap entry pointed away from.
+   *
+   * Everything derives from this one value: canonicals, OG URLs, the sitemap,
+   * robots.txt, metadataBase and every schema @id. If the primary domain is
+   * ever flipped back in Vercel, change it here in the same sitting.
+   */
+  url: "https://www.parkermcgovern.ca",
 
   licence: {
     agent: "M21002541",

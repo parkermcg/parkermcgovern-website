@@ -16,7 +16,7 @@ const page: ServicePage = {
   summary:
     "The renewal letter is an opening offer. What it means, when to start, and how switching lenders actually works.",
 
-  metaTitle: "Mortgage Renewal in Ontario — Should You Sign the Letter?",
+  metaTitle: "Mortgage Renewal in Ontario",
   metaDescription:
     "What your lender's renewal offer really means, when to start shopping, how switching lenders works, and when staying put is genuinely the better call.",
 

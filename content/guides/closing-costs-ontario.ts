@@ -6,9 +6,9 @@ const guide: Guide = {
   title: "Closing costs in Ontario: what else is due on the day",
   lede:
     "The down payment is the number everyone saves toward. Closing costs are the ones that arrive uninvited, all at once, and cannot be added to your mortgage.",
-  metaTitle: "Closing Costs When Buying a Home in Ontario",
+  metaTitle: "Closing Costs When Buying in Ontario",
   metaDescription:
-    "A full list of Ontario closing costs beyond your down payment — land transfer tax, legal fees, title insurance, adjustments and inspections — and roughly what to budget.",
+    "Ontario closing costs beyond your down payment: land transfer tax, legal fees, title insurance, adjustments and inspections, and what to budget.",
 
   published: "2026-07-25",
   updated: "2026-07-25",

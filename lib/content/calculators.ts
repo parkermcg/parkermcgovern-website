@@ -27,9 +27,9 @@ export const calculatorPages: CalculatorPage[] = [
     title: "What a mortgage actually costs each month — and in total.",
     lede:
       "Set the price, the down payment and the rate. This uses Canadian semi-annual compounding, and it models accelerated payment schedules properly rather than pretending they change nothing.",
-    metaTitle: "Mortgage Payment Calculator (Canadian Compounding)",
+    metaTitle: "Mortgage Payment Calculator (Canada)",
     metaDescription:
-      "Calculate your Canadian mortgage payment with correct semi-annual compounding, CMHC insurance, and accelerated payment schedules that genuinely shorten your amortisation.",
+      "Calculate your Canadian mortgage payment with correct semi-annual compounding, CMHC insurance and accelerated schedules that shorten amortisation.",
     intro: [
       "Most mortgage calculators online are built for American mortgages, which compound monthly. Canadian mortgages compound semi-annually by law, which makes the true periodic rate slightly lower. The difference is small on any one payment and meaningful across twenty-five years.",
       "This one also does something most calculators get wrong: if you choose an accelerated payment schedule, it solves for how much sooner you finish rather than assuming the amortisation is unchanged.",
@@ -80,9 +80,9 @@ export const calculatorPages: CalculatorPage[] = [
     title: "Ontario land transfer tax, and the extra one Toronto charges.",
     lede:
       "Usually the largest single cost on closing day after your down payment — and roughly double inside the City of Toronto, because a municipal tax applies on top of the provincial one.",
-    metaTitle: "Ontario Land Transfer Tax Calculator (with Toronto MLTT)",
+    metaTitle: "Ontario Land Transfer Tax Calculator",
     metaDescription:
-      "Calculate Ontario land transfer tax and Toronto's municipal land transfer tax, including the first-time buyer rebates. Updated for the Toronto rates effective April 2026.",
+      "Calculate Ontario land transfer tax and Toronto's municipal land transfer tax, including both first-time buyer rebates. Verified against current rates.",
     intro: [
       "Land transfer tax is paid to the government when property changes hands, calculated on the purchase price in brackets rather than as one flat percentage. It is due on closing and cannot be added to your mortgage — it has to come from cash.",
       "If the property sits inside the City of Toronto, a second municipal land transfer tax applies on top. This is the single biggest cost difference between buying in Toronto and buying anywhere else in the GTA.",
@@ -126,7 +126,7 @@ export const calculatorPages: CalculatorPage[] = [
     title: "What a lender will actually lend you.",
     lede:
       "Not what you think you can afford — what passes the two debt-service ratios, at the stress-tested rate rather than the rate you will pay.",
-    metaTitle: "Mortgage Affordability Calculator for Ontario",
+    metaTitle: "Mortgage Affordability Calculator",
     metaDescription:
       "Work out your maximum mortgage using the GDS and TDS ratios lenders actually apply, including the stress test, property tax and condo fees.",
     intro: [
@@ -225,7 +225,7 @@ export const calculatorPages: CalculatorPage[] = [
     title: "The rate you have to prove you could pay.",
     lede:
       "Lenders qualify you at the greater of your rate plus two percent, or 5.25% — whichever is higher. Here is what that does to the payment you must satisfy.",
-    metaTitle: "Mortgage Stress Test Calculator (Minimum Qualifying Rate)",
+    metaTitle: "Mortgage Stress Test Calculator",
     metaDescription:
       "See the payment you must qualify for under the Canadian mortgage stress test, and how it compares to the payment you would actually make.",
     intro: [

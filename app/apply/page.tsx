@@ -9,7 +9,7 @@ import { PageHero } from "@/components/sections/PageHero";
 export const metadata = pageMetadata({
   title: "Start your mortgage application",
   description:
-    "What you'll need, how long it takes and what happens after you submit. Secure online mortgage application through Parker McGovern, licensed Ontario mortgage agent.",
+    "What you'll need, how long it takes and what happens after you submit. Secure online mortgage application with a licensed Ontario mortgage agent.",
   path: "/apply",
 });
 

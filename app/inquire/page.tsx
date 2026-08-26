@@ -25,7 +25,7 @@ import { LeadForm } from "@/components/sections/LeadForm";
  */
 
 export const metadata = pageMetadata({
-  title: "Inquire — Mortgage Questions Answered, Ontario",
+  title: "Inquire — Ontario Mortgage Questions",
   description:
     "Ask a licensed Ontario mortgage agent a question. Name, number and a short message — no documents, no obligation, and no credit check to have the conversation.",
   path: "/inquire",

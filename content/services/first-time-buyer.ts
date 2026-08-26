@@ -18,7 +18,7 @@ const page: ServicePage = {
 
   metaTitle: "First-Time Home Buyer Mortgages in Ontario",
   metaDescription:
-    "Down payment minimums, land transfer tax rebates, closing costs and how much you can borrow as a first-time buyer in Ontario. Plain explanation from a licensed mortgage agent.",
+    "Down payment minimums, land transfer tax rebates, closing costs and how much you can actually borrow as a first-time buyer in Ontario.",
 
   intro: [
     "The hardest part of a first purchase is not the mortgage. It is that nobody sets out the sequence — so you end up learning what a status certificate is on the day someone needs one, and finding out about land transfer tax a fortnight before closing.",

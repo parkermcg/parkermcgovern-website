@@ -6,7 +6,7 @@ const guide: Guide = {
   title: "The mortgage stress test, and why you're approved for less than you expected",
   lede:
     "Lenders do not qualify you at the rate you will pay. They qualify you at a higher one, and that single rule is the main reason approvals come in below what people budget for.",
-  metaTitle: "The Mortgage Stress Test in Canada, Explained",
+  metaTitle: "The Mortgage Stress Test, Explained",
   metaDescription:
     "How the minimum qualifying rate works, why you are tested at a rate you will not pay, and the renewal exemption most borrowers do not know about.",
 

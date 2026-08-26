@@ -6,7 +6,7 @@ const guide: Guide = {
   title: "Mortgage penalties: why breaking a fixed mortgage can cost thousands",
   lede:
     "There are two ways lenders calculate a prepayment penalty. One is predictable and modest. The other is neither, and it is the one attached to most fixed-rate mortgages.",
-  metaTitle: "Mortgage Prepayment Penalties Explained — IRD vs Three Months' Interest",
+  metaTitle: "Mortgage Penalties: IRD vs 3 Months",
   metaDescription:
     "How Canadian lenders calculate mortgage prepayment penalties, why the interest rate differential can run to thousands, and how to find out what yours would be.",
 

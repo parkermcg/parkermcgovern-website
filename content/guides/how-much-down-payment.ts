@@ -6,7 +6,7 @@ const guide: Guide = {
   title: "How much down payment you actually need in Canada",
   lede:
     "The minimum is not one percentage. It is calculated in slices, and the answer on a $700,000 home is not five percent of $700,000.",
-  metaTitle: "How Much Down Payment Do You Need in Canada?",
+  metaTitle: "Down Payment Minimums in Canada",
   metaDescription:
     "Canada's tiered minimum down payment rules explained, plus what changes at 20%, what happens at $1.5 million, and where the money is allowed to come from.",
 

@@ -14,7 +14,7 @@ import { featuredReviews } from "@/lib/content/reviews";
 export const metadata = pageMetadata({
   title: `Mortgage Agent in Richmond Hill — ${site.name}`,
   description:
-    "Licensed Ontario mortgage agent in Richmond Hill. One application goes to more than 40 lenders, so you can compare your renewal, purchase or refinance options before you commit.",
+    "Licensed Ontario mortgage agent in Richmond Hill. One application reaches 40+ lenders, so you can compare renewal, purchase and refinance options first.",
   path: "/",
 });
 

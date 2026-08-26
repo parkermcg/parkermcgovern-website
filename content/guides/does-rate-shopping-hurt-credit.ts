@@ -6,7 +6,7 @@ const guide: Guide = {
   title: "Does shopping for a mortgage rate hurt your credit score?",
   lede:
     "The fear of damaging your score stops people comparing offers — which usually costs far more than the enquiry ever would.",
-  metaTitle: "Does Mortgage Rate Shopping Hurt Your Credit Score?",
+  metaTitle: "Does Rate Shopping Hurt Your Credit?",
   metaDescription:
     "How credit enquiries work in Canada, why multiple mortgage checks in a short window count as one, and when a credit check actually happens.",
 

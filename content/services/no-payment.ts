@@ -24,17 +24,17 @@ import type { ServicePage } from "@/lib/content/types";
  */
 const page: ServicePage = {
   slug: "no-payment",
-  eyebrow: "No-payment mortgages",
-  title: "A mortgage with no payments is not a mortgage with no cost.",
+  eyebrow: "Reverse mortgages",
+  title: "Reverse mortgages: no payments is not the same as no cost.",
   lede:
     "Products that require nothing from you each month do exist, and for a narrow group of people they are the right answer. The interest does not stop — it moves from your bank account onto your balance, where it compounds quietly against the equity in your home.",
 
   summary:
     "Reverse mortgages and accruing-interest lending — how they work, what they really cost, and the much smaller group of people they genuinely suit.",
 
-  metaTitle: "Mortgages With No Monthly Payments in Ontario",
+  metaTitle: "Reverse Mortgages in Ontario, Explained",
   metaDescription:
-    "How reverse mortgages and no-payment lending work in Ontario, what the interest actually costs you over time, and what happens to your home and your estate. Plain explanation from a licensed mortgage agent.",
+    "How reverse mortgages work in Ontario, what the interest actually costs you over time, and what happens to your home and your estate.",
 
   intro: [
     "Almost everyone arrives at this subject from an advertisement. The pitch is consistent: stay in your home, take money out of it, never make a payment. All three of those claims are true, which is what makes the product so easy to sell and so easy to misunderstand.",

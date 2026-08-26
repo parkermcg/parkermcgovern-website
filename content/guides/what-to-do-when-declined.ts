@@ -6,7 +6,7 @@ const guide: Guide = {
   title: "The bank said no. What that actually means",
   lede:
     "A decline is one institution applying its own rules to your file. It is not a verdict on whether you can get a mortgage, and it is usually fixable.",
-  metaTitle: "What To Do If Your Mortgage Application Is Declined",
+  metaTitle: "Mortgage Application Declined: What Next",
   metaDescription:
     "Why banks decline mortgage applications, what to ask for afterwards, and the realistic routes forward — including when waiting is the better decision.",
 

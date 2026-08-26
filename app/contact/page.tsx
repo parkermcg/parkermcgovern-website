@@ -8,7 +8,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { LeadForm } from "@/components/sections/LeadForm";
 
 export const metadata = pageMetadata({
-  title: "Contact Parker McGovern — Mortgage Agent, Richmond Hill",
+  title: "Contact — Mortgage Agent, Richmond Hill",
   description:
     "Call, email or send a message. Licensed mortgage agent in Richmond Hill serving the Greater Toronto Area. Open seven days a week.",
   path: "/contact",

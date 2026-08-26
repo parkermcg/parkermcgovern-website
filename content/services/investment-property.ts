@@ -10,7 +10,7 @@ const page: ServicePage = {
   summary:
     "Down payment rules for rentals, how lenders credit rental income, and where portfolios tend to stall.",
 
-  metaTitle: "Investment & Rental Property Mortgages in Ontario",
+  metaTitle: "Rental Property Mortgages in Ontario",
   metaDescription:
     "Down payment rules for rentals, how lenders treat rental income, portfolio limits and financing small multi-unit properties in Ontario.",
 

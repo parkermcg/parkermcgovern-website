@@ -19,9 +19,9 @@ const page: ServicePage = {
   summary:
     "B lenders and private mortgages — what they cost, who they suit, and how to plan the exit back to a bank.",
 
-  metaTitle: "Alternative & Private Mortgage Lending in Ontario",
+  metaTitle: "Private & B Lender Mortgages Ontario",
   metaDescription:
-    "How B lenders and private mortgages work in Ontario, what they actually cost, who they suit, and how to plan the exit back to a bank. Straight explanation from a licensed mortgage agent.",
+    "How B lenders and private mortgages work in Ontario, what they actually cost, who they suit, and how to plan the exit back to a bank.",
 
   intro: [
     "Most people meet alternative lending at the worst possible moment. An application has just been declined, a closing date is coming, and someone has mentioned that there are other options without explaining what they cost.",

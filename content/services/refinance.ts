@@ -16,9 +16,9 @@ const page: ServicePage = {
   summary:
     "Reach the equity you have built, or fold high-interest debt into one payment — including when it is not worth doing.",
 
-  metaTitle: "Mortgage Refinancing & Debt Consolidation in Ontario",
+  metaTitle: "Refinance & Debt Consolidation Ontario",
   metaDescription:
-    "How refinancing works in Ontario, the 80% equity ceiling, prepayment penalties, and whether consolidating debt into your mortgage actually saves money. Honest explanation, including when not to.",
+    "How refinancing works in Ontario: the 80% equity ceiling, prepayment penalties, and whether consolidating debt into your mortgage actually saves money.",
 
   intro: [
     "There are three reasons people refinance: to consolidate expensive debt into one cheaper payment, to fund something substantial like a renovation or a down payment on a second property, or to restructure a mortgage that no longer fits their life.",

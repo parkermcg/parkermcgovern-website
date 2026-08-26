@@ -6,7 +6,7 @@ const guide: Guide = {
   title: "Ontario land transfer tax, explained properly",
   lede:
     "It is charged in brackets rather than as one percentage, it is due in cash on closing, and inside Toronto you pay it twice.",
-  metaTitle: "Ontario Land Transfer Tax Explained (Including Toronto)",
+  metaTitle: "Ontario Land Transfer Tax, Explained",
   metaDescription:
     "How Ontario land transfer tax is calculated in brackets, how Toronto's municipal tax stacks on top, and how the first-time buyer rebates work.",
 

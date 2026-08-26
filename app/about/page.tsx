@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { PageHero } from "@/components/sections/PageHero";
 
 export const metadata = pageMetadata({
-  title: "About Parker McGovern — Licensed Mortgage Agent",
+  title: "About — Mortgage Agent in Richmond Hill",
   description:
     "Parker McGovern is a FSRA-licensed Mortgage Agent (Level 2) with Mortgagebroker.ca, based in Richmond Hill and serving the Greater Toronto Area.",
   path: "/about",

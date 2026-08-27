@@ -10,18 +10,25 @@ import type { ServicePage } from "@/lib/content/types";
  *   cannot run longer than five years; unlike bankruptcy the debtor keeps
  *   their assets provided the terms are met.
  *
- * DELIBERATELY WITHOUT HARD NUMBERS in two places. Parker approved
- * publication on 2026-08-26 without supplying them, so the page ships
- * describing the mechanism rather than stating figures:
- *   1. Credit bureau retention. Equifax and TransUnion remove a completed
- *      consumer proposal on different schedules and I had no primary source.
- *      The page tells the reader to ask the bureaus for their own file.
- *   2. Lender re-qualification timelines. "Discharged plus re-established
- *      credit" is framed as common practice, not as a rule, because it
- *      varies by lender and is not a published standard.
- * Both are safe as written. If Parker later supplies sourced figures they
- * can be added — but do not invent them (CLAUDE.md §4).
- *   3. No rates, fees or approval odds anywhere — none supplied.
+ * CREDIT BUREAU RETENTION — verified against FCAC 2026-08-26. Both figures
+ * were previously omitted for lack of a source; FCAC publishes them directly:
+ *   - Consumer proposal: Equifax AND TransUnion both remove it 3 years after
+ *     the debts in the proposal are paid, or 6 years after signing, whichever
+ *     comes first. The two bureaus use the SAME schedule here — an earlier
+ *     draft wrongly implied they differ.
+ *   - Bankruptcy: removed 6 years after discharge, but TransUnion holds it
+ *     7 years in Ontario (one of four provinces). Clock runs from DISCHARGE,
+ *     not from filing.
+ *   - Second bankruptcy: 14 years.
+ * Source: FCAC, "How long information stays on your credit report", cited on
+ * the page. Re-check if the page is materially revised.
+ *
+ * LENDER TIMELINE — the "about two years of re-established credit" figure is
+ * Parker's own professional experience, supplied 2026-08-26, and is framed on
+ * the page as his experience rather than as a published rule. It is not a
+ * regulator's number and must not be presented as one.
+ *
+ * No rates, fees or approval odds anywhere — none supplied (CLAUDE.md §4).
  */
 const page: ServicePage = {
   slug: "bad-credit",
@@ -82,11 +89,43 @@ const page: ServicePage = {
       },
     },
     {
-      h: "What changes after a proposal or a bankruptcy",
+      h: "How long it stays on your credit report",
       p: [
-        "Both are reported to the credit bureaus and both stay on file for a period after they are resolved. Equifax and TransUnion do not use the same schedule as each other, so the honest answer to \"when does it come off\" is that you should ask the bureaus directly for your own file rather than rely on a general figure.",
-        "In practice the removal date is rarely the binding constraint anyway. What lenders weigh most heavily is what you have built since: a completed proposal or discharged bankruptcy, plus a stretch of clean, re-established credit that demonstrates the pattern has actually changed. Common practice at A lenders is to want the insolvency fully discharged and a meaningful period of re-established credit behind it — the specifics vary by lender, and this is exactly the kind of thing worth checking against current appetite rather than assuming from something you read.",
-        "Re-established credit means active accounts reporting on time, not simply the absence of new problems. A file with nothing on it at all can be harder to place than a file with two small accounts paid perfectly for two years.",
+        "These are the removal rules published by the Financial Consumer Agency of Canada, and they are worth knowing precisely rather than approximately — particularly in Ontario, where one of them runs a year longer than it does in most of the country.",
+      ],
+      list: [
+        {
+          t: "A consumer proposal — three years, or six",
+          d: "Equifax and TransUnion both remove it three years after you have paid off everything included in the proposal, or six years after you signed it, whichever comes first. On this one the two bureaus use the same schedule.",
+        },
+        {
+          t: "Which means finishing early actually helps",
+          d: "Pay the proposal off in two years and the three-years-after-payoff rule lands first, at roughly year five. Take the full five years and the six-years-after-signing cap gets there first instead. Clearing it ahead of schedule genuinely shortens how long it shows.",
+        },
+        {
+          t: "A bankruptcy — six years with Equifax",
+          d: "Removed six years after you are discharged. Note that the clock runs from discharge, not from the date you filed.",
+        },
+        {
+          t: "A bankruptcy — seven years with TransUnion in Ontario",
+          d: "Ontario is one of four provinces where TransUnion holds it a year longer than the usual six. So an Ontario file can be clear at Equifax and still show the bankruptcy at TransUnion, and which bureau a lender pulls will matter in that window.",
+        },
+        {
+          t: "A second bankruptcy — fourteen years",
+          d: "If you have declared bankruptcy more than once, the bureaus keep the information for fourteen years.",
+        },
+      ],
+      aside: {
+        h: "The removal date is rarely the binding constraint",
+        p: "Waiting for something to disappear from your report is usually the wrong plan. What lenders weigh most heavily is what you have built since — and in my experience you are typically looking at about two years of clean, re-established credit after a discharge or completion before A lenders will seriously engage. That two years can run concurrently with the item still showing on your report. B lenders will often look sooner.",
+      },
+    },
+    {
+      h: "What re-established credit actually means",
+      p: [
+        "It means active accounts reporting on time, not simply the absence of new problems. This is the part people get wrong: they come out of a proposal determined never to touch credit again, and two years later have a file with nothing in it.",
+        "A file with no active credit can be harder to place than a file with two small accounts paid perfectly. Lenders are looking for evidence the pattern has changed, and an empty report provides none. A secured card and one small instalment loan, both paid on time, do more for you over two years than any explanation letter.",
+        "The other half is the paperwork. For a proposal, lenders want the certificate of full performance showing it is formally completed — not a payment history showing you are nearly there. For a bankruptcy, they want the discharge. Get both when they are issued rather than trying to obtain them years later.",
       ],
     },
     {
@@ -152,7 +191,15 @@ const page: ServicePage = {
     },
     {
       q: "How long after a bankruptcy or proposal before I can get a normal mortgage?",
-      a: "It depends far more on what you have rebuilt than on the calendar. Lenders want the insolvency fully discharged or completed, and then a stretch of re-established credit showing the pattern has genuinely changed — active accounts paid on time, not just an absence of new problems. Requirements differ by lender, so it is worth having your actual file looked at rather than working from a general rule.",
+      a: "In my experience you are typically looking at about two years of clean, re-established credit after the discharge or completion before A lenders will seriously engage — and that two years can run while the item is still showing on your report. B lenders will often look sooner, at a higher cost. What matters more than the calendar is what you have rebuilt: active accounts paid on time, plus the discharge or certificate of full performance in hand.",
+    },
+    {
+      q: "How long does a consumer proposal stay on my credit report?",
+      a: "Equifax and TransUnion both remove it three years after you have paid off everything included in the proposal, or six years after you signed it, whichever comes first. That means finishing the proposal early genuinely shortens how long it shows — pay it off in two years and it clears at roughly year five rather than year six.",
+    },
+    {
+      q: "How long does a bankruptcy stay on my credit report in Ontario?",
+      a: "Equifax removes it six years after your discharge. TransUnion holds it for seven years in Ontario, which is one of four provinces where it runs a year longer than the usual six. So there is a window where your Equifax file is clear and your TransUnion file is not, and which bureau a lender pulls matters. A second bankruptcy stays for fourteen years.",
     },
     {
       q: "Does checking my options hurt my credit further?",
@@ -176,6 +223,10 @@ const page: ServicePage = {
     {
       name: "Office of the Superintendent of Bankruptcy — What is a Licensed Insolvency Trustee?",
       href: "https://ised-isde.canada.ca/site/office-superintendent-bankruptcy/en/you-owe-money/what-licensed-insolvency-trustee",
+    },
+    {
+      name: "Financial Consumer Agency of Canada — How long information stays on your credit report",
+      href: "https://www.canada.ca/en/financial-consumer-agency/services/credit-reports-score/information-credit-report.html",
     },
     {
       name: "Financial Consumer Agency of Canada — Credit reports and scores",

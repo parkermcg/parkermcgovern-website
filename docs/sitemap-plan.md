@@ -45,6 +45,10 @@ The trade-off, recorded so it is a decision rather than a drift: renewal was pri
 
 **Deliberately not built:** `/mortgages/new-construction` and `/mortgages/private-lending`. Both are real services with no distinct content yet. New construction becomes a section on `/mortgages/first-time-buyer` and `/mortgages/investment-property`; private/alternative lending becomes a section on `/mortgages/refinance`. They graduate to pages when there is 1,000+ words of genuinely distinct material.
 
+**Changed 2026-08-26 — city pages built at Parker's direction.** `/service-areas` and five area pages now exist: `toronto`, `vaughan`, `markham`, `richmond-hill`, `aurora-newmarket`. Each carries a distinct mortgage topic rather than templated copy, and each states what does *not* differ by municipality. Aurora and Newmarket share one page on purpose. King and Whitchurch-Stouffville remain unbuilt — nothing distinctive to say. See CLAUDE.md §5 for the amended rule.
+
+The original reasoning is left below, because it is still the test any *new* area page has to pass.
+
 **Deliberately not built:** per-town pages for Vaughan, Newmarket, Aurora, Markham, King, Whitchurch-Stouffville. Every one of these sits in York Region with identical land transfer tax treatment and identical lender access, so the pages would be near-duplicates — the doorway pattern the brief prohibits. Reach is signalled instead through `areaServed` in schema (unlimited municipalities, zero thin pages) and one substantive `/service-areas` page.
 
 Toronto is the single exception, and it earns its page on merit: the Municipal Land Transfer Tax roughly doubles closing costs there and exists nowhere else in the GTA. That is real, differentiated, locally-specific content.

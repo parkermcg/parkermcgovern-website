@@ -104,6 +104,14 @@ export function Footer() {
                   {site.contact.email}
                 </a>
               </li>
+              <li className="pt-1">
+                <Link
+                  href="/service-areas"
+                  className="transition-colors hover:text-brass-light"
+                >
+                  Service areas
+                </Link>
+              </li>
               <li className="pt-1">{formattedAddress}</li>
               <li className="pt-1">{site.hoursLabel}</li>
             </ul>

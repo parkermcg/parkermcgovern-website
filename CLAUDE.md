@@ -95,7 +95,11 @@ Brokerage name, brokerage licence, and agent licence appear in the footer sitewi
 
 **The cannibalization test:** if two pages could swap body copy without anyone noticing, they are one page. Applied before any new page is created.
 
-**No per-town pages.** GTA municipalities share identical LTT treatment and lender access; per-town pages are the doorway pattern. Reach is signalled via `areaServed` in schema plus one `/service-areas` page. Toronto is the sole exception and earns it through the Municipal Land Transfer Tax.
+**Per-town pages — rule amended 2026-08-26 at Parker's direction.** The original rule prohibited them outright as a doorway pattern. Parker asked for GTA city pages after that objection was raised; the amended rule is that an area page ships **only if it carries a mortgage topic that is genuinely different**, not the same copy with a name swapped, and **only if it states plainly what does not differ by municipality**.
+
+Built on that basis: Toronto (Municipal Land Transfer Tax), Vaughan (pre-construction financing), Markham (condo underwriting and newcomer files), Richmond Hill (home office), Aurora & Newmarket (freehold, wells and septic — **one page, deliberately**, because split apart they would have been near-duplicates).
+
+Still prohibited: an area page with nothing distinctive to say. If a municipality has no genuinely different mortgage content, it is covered by `areaServed` in schema and the `/service-areas` hub, not by a thin page. **No per-city property tax rates are published** — set separately by each municipality, no single authoritative source, and they would need re-verifying annually on a site with no CMS.
 
 **Tiering.** Only the six ranked money pages in `docs/sitemap-plan.md` get standalone pages. Anything else is a section on a parent page, or ships `noindex` with a flag to Parker — never a thin page.
 

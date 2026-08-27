@@ -3,6 +3,7 @@ import { site } from "@/lib/site";
 import { publishedServicePages } from "@/lib/content/services";
 import { calculatorPages } from "@/lib/content/calculators";
 import { publishedGuides } from "@/lib/content/guides";
+import { publishedAreas } from "@/lib/content/areas";
 
 /**
  * Only live routes belong here. Entries are added as each phase ships —
@@ -29,6 +30,12 @@ const routes: {
     path: `/calculators/${c.slug}`,
     priority: 0.9,
     changeFrequency: "monthly" as const,
+  })),
+  { path: "/service-areas", priority: 0.7, changeFrequency: "yearly" as const },
+  ...publishedAreas.map((a) => ({
+    path: `/service-areas/${a.slug}`,
+    priority: 0.7,
+    changeFrequency: "yearly" as const,
   })),
   { path: "/guides", priority: 0.7, changeFrequency: "monthly" as const },
   ...publishedGuides.map((g) => ({

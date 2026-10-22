@@ -14,6 +14,10 @@ import { Footer } from "@/components/sections/Footer";
  */
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleTag } from "@/components/seo/GoogleTag";
+import {
+  GoogleTagManager,
+  GoogleTagManagerNoScript,
+} from "@/components/seo/GoogleTagManager";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -59,6 +63,7 @@ export default function RootLayout({
       className={`${fraunces.variable} ${publicSans.variable} ${plexMono.variable}`}
     >
       <body>
+        <GoogleTagManagerNoScript id={site.googleTagManagerId} />
         <JsonLd data={[localBusinessSchema(), personSchema()]} />
         <a
           href="#main"
@@ -71,6 +76,7 @@ export default function RootLayout({
         <Footer />
         <Analytics />
         <GoogleTag id={site.googleAdsTagId} />
+        <GoogleTagManager id={site.googleTagManagerId} />
       </body>
     </html>
   );

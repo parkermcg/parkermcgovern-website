@@ -79,6 +79,15 @@ export const site = {
    */
   googleAdsTagId: "AW-18353578639",
 
+  /**
+   * Google Tag Manager container, supplied by Parker 2026-10-22. Public by
+   * design, same reasoning as the Ads tag above.
+   *
+   * NOTE: both this and googleAdsTagId are live. Do not also configure the
+   * Ads conversion inside this container, or conversions double-count.
+   */
+  googleTagManagerId: "GTM-W3PV3WCD",
+
   links: {
     book: "https://calendly.com/mortgageagent",
     apply: "https://velocity.newton.ca/sso/public.php?sc=2xreedfpzly7",

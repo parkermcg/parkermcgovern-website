@@ -48,10 +48,12 @@ const sections = [
     ],
   },
   {
-    h: "Cookies and analytics",
+    h: "Cookies, analytics and advertising",
     p: [
-      "This site does not set advertising or tracking cookies, does not run advertising scripts, and does not sell or share information about your visit with advertisers.",
-      "It does use Vercel Web Analytics to count page views and see which pages people find useful. This was chosen specifically because it sets no cookies and does not build a profile of you: it records the page visited, the referring site, and coarse details like country and device type, without storing an identifier that follows you between visits or across other websites. There is nothing in it that identifies you personally.",
+      "Two things here collect information about your visit, and they work very differently. I would rather set both out plainly than bury them.",
+      "The first is Vercel Web Analytics, which counts page views and shows me which pages people find useful. It was chosen specifically because it sets no cookies and builds no profile of you: it records the page visited, the referring site, and coarse details like country and device type, without storing an identifier that follows you between visits or across other websites. Nothing in it identifies you personally.",
+      "The second is the Google Ads tag. I advertise on Google, and this tag tells me when someone who arrived from one of those ads goes on to contact me — so I can tell which ads are worth paying for. It does set cookies, it is an advertising technology operated by Google, and information it collects is shared with Google and handled under Google's own privacy policy rather than this one. If you would rather not be included, your browser's settings for blocking third-party cookies will prevent it, and nothing on this site will stop working if you do.",
+      "Neither of these is used to make any decision about you. Nothing here feeds into whether you qualify for a mortgage, what rate you are shown, or anything a lender sees. I do not sell your information.",
       "The site is hosted on Vercel, which processes standard server request information — such as IP address and browser type — for security and to keep the site running.",
     ],
   },

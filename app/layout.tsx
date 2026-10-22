@@ -13,6 +13,7 @@ import { Footer } from "@/components/sections/Footer";
  * Enabled in the Vercel dashboard by Parker 2026-08-26. /privacy describes it.
  */
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleTag } from "@/components/seo/GoogleTag";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -69,6 +70,7 @@ export default function RootLayout({
         <main id="main">{children}</main>
         <Footer />
         <Analytics />
+        <GoogleTag id={site.googleAdsTagId} />
       </body>
     </html>
   );

@@ -69,6 +69,16 @@ export const site = {
   /** Genuine Google reviews. Displayed as text only — never marked up as schema. */
   reviews: { rating: 5.0, count: 45 },
 
+  /**
+   * Google Ads tag (gtag.js), supplied by Parker 2026-10-22 from his Ads
+   * account. Not a secret — it is visible in the page source of every page
+   * by design, so it is config rather than an environment variable, and
+   * keeping it here means it cannot silently go missing from a deploy.
+   *
+   * This is the Ads tag, not a Google Tag Manager container (GTM-XXXXXXX).
+   */
+  googleAdsTagId: "AW-18353578639",
+
   links: {
     book: "https://calendly.com/mortgageagent",
     apply: "https://velocity.newton.ca/sso/public.php?sc=2xreedfpzly7",

@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { Header } from "@/components/sections/Header";
 import { serviceNavItems } from "@/lib/content/services";
 import { Footer } from "@/components/sections/Footer";
+import { StickyCall } from "@/components/ui/StickyCall";
 /**
  * Vercel Web Analytics. Chosen over GA4 deliberately: it sets no cookies and
  * collects no personal data, so it needs no consent banner on a lead-gen site,
@@ -74,6 +75,7 @@ export default function RootLayout({
         <Header services={serviceNavItems} />
         <main id="main">{children}</main>
         <Footer />
+        <StickyCall />
         <Analytics />
         <GoogleTag id={site.googleAdsTagId} />
         <GoogleTagManager id={site.googleTagManagerId} />

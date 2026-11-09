@@ -118,7 +118,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-rule-invert py-8">
+        {/*
+          Extra bottom padding so the StickyCall button never covers the
+          regulatory notice. Tied to that component — see its header note.
+        */}
+        <div className="border-t border-rule-invert pb-24 pt-8 sm:pb-8">
           <p className="max-w-[95ch] text-[0.78rem] leading-relaxed">
             {site.regulatoryNotice}
           </p>

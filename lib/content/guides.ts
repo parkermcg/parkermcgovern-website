@@ -82,6 +82,7 @@ import creditScore from "@/content/guides/does-rate-shopping-hurt-credit";
 import declined from "@/content/guides/what-to-do-when-declined";
 import fhsa from "@/content/guides/fhsa-explained";
 import craTaxDebt from "@/content/guides/cra-tax-debt";
+import titleFraud from "@/content/guides/title-fraud-protection";
 
 /**
  * Registry. Adding a guide: create content/guides/<slug>.ts, add one import
@@ -98,6 +99,7 @@ export const guides: Guide[] = [
   declined,
   fhsa,
   craTaxDebt,
+  titleFraud,
 ];
 
 /** Every guide including drafts. Use only for routing and lookups. */

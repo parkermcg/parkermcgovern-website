@@ -46,7 +46,7 @@ const guide: Guide = {
   slug: "title-fraud-protection",
   cluster: "deciding",
 
-  title: "A paid-off home is the one worth stealing",
+  title: "Title fraud: a paid-off home is the one worth stealing",
   lede:
     "Title fraud works by forging your identity, transferring your home into someone else's name, and borrowing against it. A property with no mortgage on it offers a fraudster the most to borrow — which is exactly why being mortgage-free is not the end of thinking about your title.",
 
